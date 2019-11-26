@@ -7,9 +7,13 @@ using UnityEngine;
 public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 {
     public GameObject Square;
+    public GameObject bus;
     // declare and initialize lists
     public List<Transform> spawnPoint = new List<Transform>();
     public List<GameObject> spawnPrefabs = new List<GameObject>();
+    public List<GameObject> spawned = new List<GameObject>();
+
+
 
 
 
@@ -19,7 +23,7 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     }
     public void Spawn(int spawnPrefabIndex, int spawnPointIndex)
     {
-        Instantiate(spawnPrefabs[spawnPrefabIndex], spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation);
+        spawned.Add(Instantiate(spawnPrefabs[spawnPrefabIndex], spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation));
     }
 
  /*   
@@ -31,12 +35,23 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 
     void Start()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < spawnPrefabs.Count; i++)
         {
             Spawn(i);
         }
+
+    }
+
+    void Update()
+    {
+        if (bus.GetComponent<BusMovement>().go == false ) //characters on bus )
+        {
+            // move to stop 
+        }
+
     }
 }
+
 
  /*   
     //Temp

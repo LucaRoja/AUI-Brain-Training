@@ -377,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272265691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.31, y: -1.65, z: -10}
+  m_LocalPosition: {x: -13, y: -1.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1785054188}
@@ -1212,9 +1212,9 @@ GameObject:
   m_Component:
   - component: {fileID: 950536789}
   - component: {fileID: 950536788}
-  - component: {fileID: 950536787}
-  - component: {fileID: 950536791}
+  - component: {fileID: 950536792}
   - component: {fileID: 950536790}
+  - component: {fileID: 950536787}
   m_Layer: 0
   m_Name: Bus
   m_TagString: Untagged
@@ -1305,40 +1305,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950536786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.31, y: -1.65, z: 0}
+  m_LocalPosition: {x: -13, y: -1.65, z: 0}
   m_LocalScale: {x: 2.9775, y: 2.196124, z: 1}
   m_Children:
   - {fileID: 108366367}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!234 &950536790
-SliderJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950536786}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 7.5372415, y: -1.4281515}
-  m_AutoConfigureAngle: 1
-  m_Angle: 0.60969704
-  m_UseMotor: 1
-  m_Motor:
-    m_MotorSpeed: -5
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 1
-  m_TranslationLimits:
-    m_LowerTranslation: 0
-    m_UpperTranslation: 15
---- !u!50 &950536791
+--- !u!50 &950536790
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -1359,6 +1333,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &950536792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950536786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2cb8705b3144856a6468c0def60f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  stops: 5
 --- !u!1 &957117813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,7 +2319,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 32.96973
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -2366,7 +2354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327549191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.31, y: -1.65, z: -10}
+  m_LocalPosition: {x: -13, y: -1.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3252,7 +3240,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 3720596525883045355, guid: cdaa881af88a5be4faf7dde436e62a72,
+      objectReference: {fileID: 6765048497626592200, guid: 43d2e3f64c7b2f94185a65d235f89887,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea69848f004a4b3086db108ef49db14, type: 3}
