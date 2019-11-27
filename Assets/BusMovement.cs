@@ -11,20 +11,20 @@ public class BusMovement : MonoBehaviour
     public float stops = 5f;
     public bool go = true;
     private float x = -12.99f;
-    private int i = 0;
+    public float currentstop = 0;
 
-    // Update is called once per frame
     void Start()
     {
-        x = transform.position.x + 25f / stops;
+        x = transform.position.x + 102.38f / (stops);
 
     }
+// Update is called once per frame
 
     void Update()
     {
-
+        
             
-        if (i < stops && go == true)
+        if (currentstop < stops && go == true)
         {
             
             if(transform.position.x < x)
@@ -34,8 +34,8 @@ public class BusMovement : MonoBehaviour
             else
             {
                 go = false;
-                i++;
-                x = transform.position.x + 25f / stops;
+                currentstop++;
+                x = transform.position.x + 102.38f / (stops);
                 }
 
         }
