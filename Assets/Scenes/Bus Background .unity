@@ -2429,6 +2429,7 @@ MonoBehaviour:
   stops: 5
   go: 1
   currentstop: 0
+  manager: {fileID: 0}
 --- !u!4 &981958178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 225458942968331422, guid: 3534705d440ec4ef5bdf6746c9c70095,
@@ -5688,7 +5689,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 6765048497626592200, guid: 43d2e3f64c7b2f94185a65d235f89887,
+      objectReference: {fileID: 3720596525883045355, guid: cdaa881af88a5be4faf7dde436e62a72,
         type: 3}
     - target: {fileID: 8308293269830492602, guid: cea69848f004a4b3086db108ef49db14,
         type: 3}
@@ -5715,6 +5716,11 @@ PrefabInstance:
       propertyPath: spawnPoint.Array.data[4]
       value: 
       objectReference: {fileID: 136473834}
+    - target: {fileID: 8308293269830492602, guid: cea69848f004a4b3086db108ef49db14,
+        type: 3}
+      propertyPath: bus
+      value: 
+      objectReference: {fileID: 950536786}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea69848f004a4b3086db108ef49db14, type: 3}
 --- !u!1001 &7021877666185066882

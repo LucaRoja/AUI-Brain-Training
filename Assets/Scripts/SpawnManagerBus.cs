@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,10 +29,23 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     public void Spawn(int spawnPrefabIndex, int spawnPointIndex)
     {
         spawned.Add(Instantiate(spawnPrefabs[spawnPrefabIndex], spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation));
-        spawned.Remove(Instantiate(spawnPrefabs[spawnPrefabIndex], spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation));
+        spawnPrefabs.RemoveAt(spawnPrefabIndex);
+        //spawnPrefabs.Remove(Instantiate(spawnPrefabs[spawnPrefabIndex], spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation));
 
     }
 
+    public void UnSpawn()
+    {
+        GameObject g = spawned[UnityEngine.Random.Range(0, spawned.Count)];
+        spawned.Remove(g);
+        StartCoroutine(RemovePlayer(g));
+    }
+
+    private IEnumerator RemovePlayer(GameObject g)
+    {
+        yield return new WaitForSeconds(3f);
+        GameObject.DestroyImmediate(g);
+    }
 
     void Start()
     {
@@ -41,39 +55,28 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
             Spawn(1,2);
         }
         */
+        bus.GetComponent<BusMovement>().manager = this;
     }
 
+
     private bool objSpawned;
-    void Update()
+
+    public void TestSpawn()
     {
-        if (bus.GetComponent<BusMovement>().go == false)// && bus.GetComponent<BusMovement>().currentstop == 1) //characters on bus )
-        {
+       
+        Spawn(UnityEngine.Random.Range(0, spawnPrefabs.Count), bus.GetComponent<BusMovement>().currentstop);
+        
+        StartCoroutine(BusRestart());
 
-            if (bus.GetComponent<BusMovement>().currentstop == 1)
-            {
-                Spawn(1, 1);
-            }
-            else if (bus.GetComponent<BusMovement>().currentstop == 2)
-            {
-                Spawn(1, 2);
-            }
-            else if (bus.GetComponent<BusMovement>().currentstop == 3)
-            {
-                Spawn(1, 3);
-            }
-            else if (bus.GetComponent<BusMovement>().currentstop == 4)
-            {
-                Spawn(1, 4);
-            }
-            else if (bus.GetComponent<BusMovement>().currentstop == 5)
-            {
-                Spawn(1, 5);
-            }
+    }
 
 
-            // spawn number at stop one, remove number 
-        }
 
+    private IEnumerator BusRestart()
+    {
+        UnSpawn();
+        yield return new WaitForSeconds(3f);
+        bus.GetComponent<BusMovement>().go = true;
     }
 }
 

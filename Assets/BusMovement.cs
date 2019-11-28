@@ -11,7 +11,8 @@ public class BusMovement : MonoBehaviour
     public float stops = 5f;
     public bool go = true;
     private float x = -12.99f;
-    public float currentstop = 0;
+    public int currentstop = 0;
+    public SpawnManagerBus manager;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class BusMovement : MonoBehaviour
             else
             {
                 go = false;
+                manager.TestSpawn();
                 currentstop++;
                 x = transform.position.x + 102.38f / (stops);
                 }
