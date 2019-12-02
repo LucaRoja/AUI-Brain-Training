@@ -16,6 +16,8 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     // randomize list order? 
     public List<GameObject> spawnPrefabs = new List<GameObject>();
     public List<GameObject> spawned = new List<GameObject>();
+    public int SpawnsPerStop = 4;
+    public int UnSpawnsPerStop = 2;
 
 
 
@@ -30,22 +32,27 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     {
         spawned.Add(Instantiate(spawnPrefabs[spawnPrefabIndex], spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation));
         spawnPrefabs.RemoveAt(spawnPrefabIndex);
-        //spawnPrefabs.Remove(Instantiate(spawnPrefabs[spawnPrefabIndex], spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation));
 
     }
 
     public void UnSpawn()
     {
         GameObject g = spawned[UnityEngine.Random.Range(0, spawned.Count)];
-        spawned.Remove(g);
-        StartCoroutine(RemovePlayer(g));
+
+        if (spawned.Count > 1)
+            spawned.Remove(g);
+            StartCoroutine(RemovePlayer(g));
+        //else 
+
     }
 
     private IEnumerator RemovePlayer(GameObject g)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         GameObject.DestroyImmediate(g);
     }
+
+
 
     void Start()
     {
@@ -63,19 +70,30 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 
     public void TestSpawn()
     {
-       
-        Spawn(UnityEngine.Random.Range(0, spawnPrefabs.Count), bus.GetComponent<BusMovement>().currentstop);
-        
-        StartCoroutine(BusRestart());
+
+        for (int i = 0; i < UnityEngine.Random.Range(0, SpawnsPerStop); i++)
+            if (spawnPrefabs.Count > 0)
+            {
+                Spawn(UnityEngine.Random.Range(0, spawnPrefabs.Count), bus.GetComponent<BusMovement>().currentstop);
+                StartCoroutine(BusRestart());
+            }
+           // else
+            {
+             //   StartCoroutine(BusRestart());
+            }
+
+
+
+
+
 
     }
 
 
-
     private IEnumerator BusRestart()
     {
-        UnSpawn();
-        yield return new WaitForSeconds(3f);
+        //UnSpawn();
+        yield return new WaitForSeconds(1f);
         bus.GetComponent<BusMovement>().go = true;
     }
 }
