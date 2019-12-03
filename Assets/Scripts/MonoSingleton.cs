@@ -21,6 +21,10 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
     }
 
     public virtual void Init() { }
+
+   
+
+ 
     private void Awake()
     {
         if (instance == null)
