@@ -43,17 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adcc9a2fa92b4eec803f4d0f0788dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 101236830232096712, guid: 6679d7bab50f0496ca76e9e633e347ea, type: 3}
-  Laser: {fileID: 256016525776450671, guid: 4522e9d2695924b71bee4b4643636e78, type: 3}
-  MeteorLarge: {fileID: 96440576899405116, guid: 0c1f3c1a651414ec3975bc5fbd2658a6,
+  SpawnNumber: 6
+  SpawnManager: {fileID: 8956331897593433516, guid: b2f2b27e86ebd9c4f960ad79cacedf42,
     type: 3}
-  MeteorMedium: {fileID: 2258061255297680850, guid: f48bac3b031d14008ae01724b6b53063,
-    type: 3}
-  MeteorSmall: {fileID: 2558194220583610369, guid: 6eb3cc8187b4f464bb7c15b90718a17b,
-    type: 3}
-  MeteorTiny: {fileID: 5557470140679199406, guid: 383b12578cdbb4b0aa0a86109c6e5038,
-    type: 3}
-  RegularExplosion: {fileID: 8891358099380460933, guid: 61356399c1cff4f8fb7b2cf428c2331f,
-    type: 3}
-  Ufo: {fileID: 3633546664769342646, guid: dc9c075b70f094a098da9c01eaef9f0f, type: 3}
-  screen: {fileID: 11400000, guid: 6fb2baa632dde419e9cf6a4896b367ee, type: 2}
+  bounce: 1
+  _lower_velocity: 3
+  _upper_velocity: 6
+  screen: {fileID: 0}

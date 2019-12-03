@@ -50,6 +50,9 @@ MonoBehaviour:
   Rectangle: {fileID: 3720596525883045355, guid: cdaa881af88a5be4faf7dde436e62a72,
     type: 3}
   Elipse: {fileID: 6765048497626592200, guid: 43d2e3f64c7b2f94185a65d235f89887, type: 3}
-  Star: {fileID: 5564219170185041394, guid: aa56a4c613bf4504a8a7838c5f0bbad2, type: 3}
-  SpawnNumber: 6
+  Star: {fileID: 1509288999818785388, guid: 97da5531753c3d04abab894d8f39d2e8, type: 3}
+  SpawnNumber: 1
+  bounce: 1
+  _lower_velocity: 3
+  _upper_velocity: 6
   screen: {fileID: 11400000, guid: 6fb2baa632dde419e9cf6a4896b367ee, type: 2}

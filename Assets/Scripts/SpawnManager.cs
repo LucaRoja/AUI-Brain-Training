@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject Rectangle;
     public GameObject Elipse;
     public GameObject Star;
+    private List<GameObject> spawnPrefabs = new List<GameObject>();
     private GameObject go;
 
     ScreenLimits screenLimits;
@@ -23,79 +24,32 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
        
     }
 
     // Update is called once per frame
     void Start()
     {
-        //screenLimits.bounce = bounce;
-        if (SpawnNumber >= 1)
-        {
-            go = Instantiate(Square, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-            go = Instantiate(Square, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-        }
-        if (SpawnNumber >= 2)
-        {
-            go = Instantiate(Circle, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-            go = Instantiate(Circle, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-        }
-        if (SpawnNumber >= 3)
-        {
-            go = Instantiate(Triangle, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-            go = Instantiate(Triangle, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-        }
-        if (SpawnNumber >= 4)
-        {
-            go = Instantiate(Star, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-            go = Instantiate(Star, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-        }
-        if (SpawnNumber >= 5)
-        {
-            go = Instantiate(Rectangle, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-            go = Instantiate(Rectangle, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-        }
-        if (SpawnNumber >= 6)
-        {
-            go = Instantiate(Elipse, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-            go = Instantiate(Elipse, screen.Random(), Quaternion.identity);
-            go.GetComponent<ScreenLimits>().bounce = bounce;
-            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
-            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-        }
+        spawnPrefabs.Add(Square);
+        spawnPrefabs.Add(Triangle);
+        spawnPrefabs.Add(Circle);
+        spawnPrefabs.Add(Rectangle);
+        spawnPrefabs.Add(Elipse);
+        spawnPrefabs.Add(Star);
 
+        for(int i = 0; i < SpawnNumber; i++)
+        {
+            int j = UnityEngine.Random.Range(0, spawnPrefabs.Count);
+            go = Instantiate(spawnPrefabs[j], screen.Random(), Quaternion.identity);
+            go.GetComponent<ScreenLimits>().bounce = bounce;
+            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
+            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
+            go = Instantiate(spawnPrefabs[j], screen.Random(), Quaternion.identity);
+            go.GetComponent<ScreenLimits>().bounce = bounce;
+            go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
+            go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
+            spawnPrefabs.Remove(spawnPrefabs[j]);
+        }
     }
 }

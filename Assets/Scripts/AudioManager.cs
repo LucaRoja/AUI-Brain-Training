@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : Singleton<AudioManager>
+public class AudioManager : MonoSingleton<AudioManager>
 {
     public AudioSource BackgroundMusic;
     public AudioSource SoundEffect;
 
-    public AudioClip ThrustClip;
-    public AudioClip LaserClip;
+    public AudioClip CheerSound;
+    /*public AudioClip LaserClip;
     public AudioClip RegularExplosion;
     public AudioClip SimpleExplosion;
     public AudioClip SonicExplosion;
     public AudioClip BlueLaserExplosion;
+    */
     
-    public void ThrustSound()
+    public void gameWon()
     {
-        if (ThrustClip!=null)
-            SoundEffect.PlayOneShot(ThrustClip);
+            SoundEffect.PlayOneShot(CheerSound);
     }
     
-    public void LaserSound()
+    /*public void LaserSound()
     {
         if (LaserClip!=null)
             SoundEffect.PlayOneShot(LaserClip);
@@ -31,9 +31,6 @@ public class AudioManager : Singleton<AudioManager>
         if (RegularExplosion!=null)
             SoundEffect.PlayOneShot(RegularExplosion);
     }
+    */
 
-}
-
-public class Singleton<T>
-{
 }

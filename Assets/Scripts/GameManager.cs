@@ -4,58 +4,68 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject Square;
-    public GameObject Triangle;
-    public GameObject Circle;
-    public GameObject Rectangle;
-    public GameObject Elipse;
-    public GameObject Star;
+    private GameObject clicked;
+    private Color color;
+    private Renderer clickedRenderer;
 
     public int SpawnNumber = 6;
+    public GameObject SpawnManager;
+    public GameObject AudioManager;
+    public bool bounce = false;
+    public float _lower_velocity = 3.0f;
+    public float _upper_velocity = 6.0f;
 
-    public Screen screen;
+    private bool first = true;
+    private int destroyed = 0;
 
 
     void Awake()
     {
-       //ObjectPoolingManager.Instance.CreatePool (Square, 100, 200);
-        //ObjectPoolingManager.Instance.CreatePool (MeteorLarge, 20, 100);
-        // ObjectPoolingManager.Instance.CreatePool (MeteorMedium, 20, 100);
-        // ObjectPoolingManager.Instance.CreatePool (MeteorSmall, 20, 100);
-        //ObjectPoolingManager.Instance.CreatePool (MeteorTiny, 20, 100);
-        //ObjectPoolingManager.Instance.CreatePool (RegularExplosion, 20, 100);
-        //ObjectPoolingManager.Instance.CreatePool (Ufo, 100, 200);
+        SpawnManager = Instantiate(SpawnManager);
+        SpawnManager.GetComponent<SpawnManager>().SpawnNumber = SpawnNumber;
+        SpawnManager.GetComponent<SpawnManager>().bounce = bounce;
+        SpawnManager.GetComponent<SpawnManager>()._lower_velocity = _lower_velocity;
+        SpawnManager.GetComponent<SpawnManager>()._upper_velocity = _upper_velocity;
 
     }
 
-    void Start()
-    {
-      //          for (int i = 1; i <= SpawnNumber; i++)
-      //          {
-      //             GameObject go = ObjectPoolingManager.Instance.GetObject (MeteorLarge.name);
-      //              go.transform.position = screen.Random();
-      //              go.transform.rotation = Quaternion.identity;
-      //          }
-
-    }
     // Update is called once per frame
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (hit.collider != null && first && Input.GetMouseButtonDown(0))
         {
-            if (hit.transform.name == "Square")
+            clicked = hit.transform.gameObject;
+            first = false;
+            //Get the Renderer component from the new cube
+            clickedRenderer = clicked.GetComponent<Renderer>();
+
+            //Call SetColor using the shader property name "_Color" and setting the color to red
+            color = clickedRenderer.material.GetColor("_Color");
+            clickedRenderer.material.SetColor("_Color", Color.gray);
+
+        }
+        else if (hit.collider != null && !first && Input.GetMouseButtonDown(0) && hit.transform.gameObject != clicked)
+        {
+            first = true;
+            if(clicked.name == hit.transform.name)
             {
-                Debug.Log("This is a Player");
+                Destroy(clicked);
+                Destroy(hit.transform.gameObject);
+                destroyed += 1;
+                //play rewarding sound
             }
             else
             {
-                Debug.Log("This isn't a Player");
+                clickedRenderer.material.SetColor("_Color", color);
             }
         }
-
+        if(destroyed == SpawnNumber)
+        {
+            Destroy(SpawnManager);
+            RestartManager.gameOver();
+            AudioManager.GetComponent<AudioManager>().gameWon();
+        }
     }
 
 }
