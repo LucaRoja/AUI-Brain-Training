@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 83fdab3974652472abae9c21937449c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2454034636560895404
+    second: Shapes-PatternB&W_0
+  - first:
+      213: -9053727260677385752
+    second: Shapes-PatternB&W_1
+  - first:
+      213: 6456402393987069159
+    second: Shapes-PatternB&W_2
+  - first:
+      213: 3374389001876594981
+    second: Shapes-PatternB&W_3
+  - first:
+      213: -6642515237816303745
+    second: Shapes-PatternB&W_4
+  - first:
+      213: 5160109094095942890
+    second: Shapes-PatternB&W_5
+  - first:
+      213: 8940526546128019734
+    second: Shapes-PatternB&W_6
+  - first:
+      213: -8634392827353883225
+    second: Shapes-PatternB&W_7
+  - first:
+      213: 3454079282213212274
+    second: Shapes-PatternB&W_8
+  - first:
+      213: -514215663531612522
+    second: Shapes-PatternB&W_9
+  - first:
+      213: -5692773051313578226
+    second: Shapes-PatternB&W_10
+  - first:
+      213: -1845313343804184228
+    second: Shapes-PatternB&W_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_0
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 2217
+        width: 902
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641af87d47ad14666b1ba6361de553d8
+      internalID: 2454034636560895404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_1
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 2217
+        width: 899
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1dd2e8c26caf44a0b09a402ffb61c23
+      internalID: -9053727260677385752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_2
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 2217
+        width: 899
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99307b54e5f684c23a80ffb0a6c3811c
+      internalID: 6456402393987069159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_3
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 2217
+        width: 899
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a9bc9c7fa744fddaefb2b59e7c8d36
+      internalID: 3374389001876594981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_4
+      rect:
+        serializedVersion: 2
+        x: 4742
+        y: 2217
+        width: 899
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf314e98993c4d11aa4460851dfc67d
+      internalID: -6642515237816303745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_5
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1075
+        width: 898
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93dc4e079b6134752b73c0a859e81c5e
+      internalID: 5160109094095942890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_6
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 1075
+        width: 899
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8835aa8ff35e2462a90edc5750746271
+      internalID: 8940526546128019734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_7
+      rect:
+        serializedVersion: 2
+        x: 2533
+        y: 1075
+        width: 899
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea60472d3d6b4be4a27bda658413368
+      internalID: -8634392827353883225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_8
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 1075
+        width: 899
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ddf24c370e284d8b8b568e6a42342ca
+      internalID: 3454079282213212274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_9
+      rect:
+        serializedVersion: 2
+        x: 4742
+        y: 1072
+        width: 899
+        height: 902
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6719f4f0c223f4c4fa367926a397c75f
+      internalID: -514215663531612522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_10
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 905
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c77d2c33ccdf48e6a00cc61fce9291f
+      internalID: -5692773051313578226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternB&W_11
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 0
+        width: 899
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de3768e54c09497092a51ed74f4c23d
+      internalID: -1845313343804184228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
