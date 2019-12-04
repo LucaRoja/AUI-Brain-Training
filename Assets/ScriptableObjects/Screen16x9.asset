@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2911083fb2b347688f1cb80bf8157e6, type: 3}
   m_Name: Screen16x9
   m_EditorClassIdentifier: 
-  Width: 18
-  Height: 10
+  Width: 16
+  Height: 8

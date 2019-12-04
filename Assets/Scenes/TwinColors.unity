@@ -209,6 +209,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
+        type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2af35d21a2880514782bcf84077f4d3d, type: 3}
     - target: {fileID: 7028929092747169928, guid: 14f287941310d4f37a38d47844a3a020,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -287,21 +302,6 @@ PrefabInstance:
     - target: {fileID: 7028929092747169929, guid: 14f287941310d4f37a38d47844a3a020,
         type: 3}
       propertyPath: RegularExplosion
-      value: 
-      objectReference: {fileID: 8300000, guid: 2af35d21a2880514782bcf84077f4d3d, type: 3}
-    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
-        type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
-        type: 3}
-      propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 2af35d21a2880514782bcf84077f4d3d, type: 3}
     - target: {fileID: 7028929092747169931, guid: 14f287941310d4f37a38d47844a3a020,
@@ -519,6 +519,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1415243935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7028929092747169927, guid: 14f287941310d4f37a38d47844a3a020,
+    type: 3}
+  m_PrefabInstance: {fileID: 305444744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1917948770
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +593,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 913976923}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -704,8 +710,7 @@ PrefabInstance:
         type: 3}
       propertyPath: AudioManager
       value: 
-      objectReference: {fileID: 7028929092747169927, guid: 14f287941310d4f37a38d47844a3a020,
-        type: 3}
+      objectReference: {fileID: 1415243935}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0401ddaec3809497fbb51415863ab19c, type: 3}
 --- !u!1 &2029218464
