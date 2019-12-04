@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: 2f636476337214ec7931c6dad10d725f
+guid: b64632bd2fd6547c5ae2e3914eb38d0f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3225277533841934719
-    second: Shapes-BlackandWhite_0
+      213: -3795552431990628927
+    second: Character-Pentagon_0
   - first:
-      213: 4792156684415108885
-    second: Shapes-BlackandWhite_1
+      213: 8093598998693264927
+    second: Character-Pentagon_1
   - first:
-      213: 1401277913987597985
-    second: Shapes-BlackandWhite_2
+      213: 3941228983298910339
+    second: Character-Pentagon_2
   - first:
-      213: 4208797783585270559
-    second: Shapes-BlackandWhite_3
+      213: 2450754695238467279
+    second: Character-Pentagon_3
   - first:
-      213: -5215480922567892758
-    second: Shapes-BlackandWhite_4
+      213: 128951910162698740
+    second: Character-Pentagon_4
   - first:
-      213: -3754752767182752846
-    second: Shapes-BlackandWhite_5
+      213: -7929689851802962867
+    second: Character-Pentagon_5
   - first:
-      213: -6422708749808077688
-    second: Shapes-BlackandWhite_6
+      213: -1450174569176458334
+    second: Character-Pentagon_6
   - first:
-      213: 7954263175417276998
-    second: Shapes-BlackandWhite_7
+      213: 8178859732350282530
+    second: Character-Pentagon_7
   - first:
-      213: 6154205304954878074
-    second: Shapes-BlackandWhite_8
+      213: -1230409512957068626
+    second: Character-Pentagon_8
   - first:
-      213: -5936849017580169206
-    second: Shapes-BlackandWhite_9
+      213: 4982401556169321745
+    second: Character-Pentagon_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shapes-BlackandWhite_0
+      name: Character-Pentagon_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1221
-        width: 974
-        height: 926
+        y: 5
+        width: 584
+        height: 772
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,19 +130,145 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6ca76b9144744527b5b69c2a5b20578
-      internalID: -3225277533841934719
+      spriteID: 759d31db070474a969c9ada27522ed9b
+      internalID: -3795552431990628927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-BlackandWhite_1
+      name: Character-Pentagon_1
       rect:
         serializedVersion: 2
-        x: 1212
-        y: 1230
-        width: 935
+        x: 696
+        y: 2
+        width: 575
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5ba9adbcade45a59916b7c370713bb
+      internalID: 8093598998693264927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character-Pentagon_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2
+        width: 597
+        height: 804
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e66fa9cc1b0749f99dc4dab7f3f187c
+      internalID: 3941228983298910339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character-Pentagon_3
+      rect:
+        serializedVersion: 2
+        x: 2154
+        y: 0
+        width: 595
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9425bc4eb743d46809ec67afad1b3f0e
+      internalID: 2450754695238467279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character-Pentagon_4
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 2
+        width: 662
+        height: 847
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b00a011041d4961a21688d147c8fc5
+      internalID: 128951910162698740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character-Pentagon_5
+      rect:
+        serializedVersion: 2
+        x: 3705
+        y: 5
+        width: 590
+        height: 786
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ab30f128713482c96c387f3201a6bc
+      internalID: -7929689851802962867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character-Pentagon_6
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 2
+        width: 575
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de24d84be76134fcf803074014978e80
+      internalID: -1450174569176458334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character-Pentagon_7
+      rect:
+        serializedVersion: 2
+        x: 5180
+        y: 2
+        width: 596
         height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -151,83 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b6f062b66d2b43318d67ba371c22278
-      internalID: 4792156684415108885
+      spriteID: 0a868600a957e45c7864019005e45723
+      internalID: 8178859732350282530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-BlackandWhite_2
+      name: Character-Pentagon_8
       rect:
         serializedVersion: 2
-        x: 2414
-        y: 1298
-        width: 1230
-        height: 725
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4ab24ebae8864329bcbf17a58dc8ada
-      internalID: 1401277913987597985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shapes-BlackandWhite_3
-      rect:
-        serializedVersion: 2
-        x: 3752
-        y: 1218
-        width: 482
-        height: 929
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 740b730f4cb424bf9a237a5d5fb743f8
-      internalID: 4208797783585270559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shapes-BlackandWhite_4
-      rect:
-        serializedVersion: 2
-        x: 4549
-        y: 1500
-        width: 1257
-        height: 532
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4c0784b1bd804ff6a8b3b44aaf367e1
-      internalID: -5215480922567892758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shapes-BlackandWhite_5
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 5899
         y: 0
-        width: 937
-        height: 926
+        width: 597
+        height: 865
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,62 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94279a1d781044a93aa61c24e41b7f59
-      internalID: -3754752767182752846
+      spriteID: 8bbd95f1883c04a1fa874ad813a5b1cc
+      internalID: -1230409512957068626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-BlackandWhite_6
+      name: Character-Pentagon_9
       rect:
         serializedVersion: 2
-        x: 1391
-        y: 8
-        width: 547
-        height: 932
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73ac35d6bb3474a30941faa99775d14f
-      internalID: -6422708749808077688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shapes-BlackandWhite_7
-      rect:
-        serializedVersion: 2
-        x: 2406
-        y: 16
-        width: 924
-        height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a7face773fa643bd9be617dee28e77a
-      internalID: 7954263175417276998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shapes-BlackandWhite_8
-      rect:
-        serializedVersion: 2
-        x: 3597
+        x: 6715
         y: 0
-        width: 938
-        height: 645
+        width: 649
+        height: 865
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,29 +319,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08fab9a9832514ec8b2af607c5a9879c
-      internalID: 6154205304954878074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shapes-BlackandWhite_9
-      rect:
-        serializedVersion: 2
-        x: 4784
-        y: 33
-        width: 1022
-        height: 890
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9c00aa0cdbd3479eb5ac2ac36e4e302
-      internalID: -5936849017580169206
+      spriteID: 94b2fe4a9be9e4c08a0d35ea7a7229de
+      internalID: 4982401556169321745
       vertices: []
       indices: 
       edges: []
