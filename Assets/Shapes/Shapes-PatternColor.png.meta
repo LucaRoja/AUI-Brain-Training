@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 44347fe9f061947e0a8931cdddbd15fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3095431032034381665
+    second: Shapes-PatternColor_0
+  - first:
+      213: -2461722655530046110
+    second: Shapes-PatternColor_1
+  - first:
+      213: -767744752302184062
+    second: Shapes-PatternColor_2
+  - first:
+      213: 2940293928363406894
+    second: Shapes-PatternColor_3
+  - first:
+      213: 7525118134640159229
+    second: Shapes-PatternColor_4
+  - first:
+      213: 6333284565013995099
+    second: Shapes-PatternColor_5
+  - first:
+      213: 3541383497772160676
+    second: Shapes-PatternColor_6
+  - first:
+      213: -7304624774297162264
+    second: Shapes-PatternColor_7
+  - first:
+      213: -206882819669528608
+    second: Shapes-PatternColor_8
+  - first:
+      213: 4099806931830291480
+    second: Shapes-PatternColor_9
+  - first:
+      213: -8232797085425803028
+    second: Shapes-PatternColor_10
+  - first:
+      213: -3935931818001157343
+    second: Shapes-PatternColor_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shapes-PatternColor_0
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 2354
+        width: 897
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea17b4b50d1d4944a26b7cd89cc7649
+      internalID: -3095431032034381665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_1
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 2354
+        width: 898
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0757903e24be6474186e9e289ab6b835
+      internalID: -2461722655530046110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_2
+      rect:
+        serializedVersion: 2
+        x: 2526
+        y: 2354
+        width: 895
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b73fcd16543044f8bf42101d8cd514e
+      internalID: -767744752302184062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_3
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 2354
+        width: 897
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01d855b9ed754978af5f46f6ce43ea6
+      internalID: 2940293928363406894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_4
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1212
+        width: 897
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1a2897d377d46e89233c1fc6009f36
+      internalID: 7525118134640159229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_5
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1212
+        width: 895
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e8dcfad64db4f82beb38d389cb5b83
+      internalID: 6333284565013995099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_6
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 1212
+        width: 896
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5114dd1db714784a06617cec1e79dd
+      internalID: 3541383497772160676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_7
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 1212
+        width: 897
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067151e471f884f4a8f4fbb60148b7f2
+      internalID: -7304624774297162264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_8
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 44
+        width: 895
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa08ae9cc7ef42f5a4c44f0708edfa3
+      internalID: -206882819669528608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_9
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 44
+        width: 897
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393037f0bbea44bc1bd4745469a3f670
+      internalID: 4099806931830291480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_10
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 44
+        width: 899
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561697a6a952e490cac917243f925055
+      internalID: -8232797085425803028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-PatternColor_11
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 44
+        width: 897
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4cdc9cd0a4c49d38e01f933c433fc8
+      internalID: -3935931818001157343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
