@@ -22,6 +22,10 @@ public class CharacterMovement : MonoBehaviour
         //Debug.Log(bus.GetComponent<Transform>().position.x);
         if (bus.GetComponent<Transform>().position.x >= transform.position.x && firstspawned)
             gameObject.SetActive(false);
+        else if (transform.position.x < bus.GetComponent<Transform>().position.x - 10)
+            {
+            Destroy(gameObject);
+        }
     }
     void unspawnpoint()
     {

@@ -8,17 +8,29 @@ public class BusMovement : MonoBehaviour
 
 {
     public float speed = 5f;
-    public float stops = 5f;
+    public int stops = 5;
     public bool go = true;
     private float x = -12.99f;
     public int currentstop = 0;
     public SpawnManagerBus manager;
+    public GameObject SpawnBusManager;
+    public GameObject BusStop;
+    public List<GameObject> BusStops = new List<GameObject>();
+
+
+
 
     void Start()
     {
         x = transform.position.x + 102.38f / (stops);
+        for (int i = 1; i <= stops; i++)
+        {
+            BusStops.Add(Instantiate(BusStop, new Vector3(i * 102.38f/(stops) , 0, 0), Quaternion.identity));
+
+        }
 
     }
+
 // Update is called once per frame
 
     void Update()
@@ -40,45 +52,25 @@ public class BusMovement : MonoBehaviour
                 x = transform.position.x + 102.38f / (stops);
                 }
 
+
         }
+
+        if (currentstop == stops)
+        {
+            StartCoroutine(endgamewait());
+        }
+    }
+    private IEnumerator endgamewait()
+    {
+        yield return new WaitForSeconds(7f);
+        for (int i = 1; i <= stops; i++)
+        {
+            Destroy(BusStops[i-1]);
+
+
+        }
+        SpawnBusManager.GetComponent<SpawnManagerBus>().endgame();
     }
 }
 //*/
 
-/*
-using UnityEngine;
-using System.Collections;
-using UnityEngine;
-
-public class BusMovement : MonoBehaviour
-
-{
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Vector3 position = this.transform.position;
-            position.x--;
-            this.transform.position = position;
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Vector3 position = this.transform.position;
-            position.x++;
-            this.transform.position = position;
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Vector3 position = this.transform.position;
-            position.y++;
-            this.transform.position = position;
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Vector3 position = this.transform.position;
-            position.y--;
-            this.transform.position = position;
-        }
-    }
-}
-*/
