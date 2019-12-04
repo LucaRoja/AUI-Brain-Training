@@ -15,6 +15,8 @@ public class BusMovement : MonoBehaviour
     public SpawnManagerBus manager;
     public GameObject SpawnBusManager;
     public GameObject BusStop;
+    public List<GameObject> BusStops = new List<GameObject>();
+
 
 
 
@@ -23,7 +25,7 @@ public class BusMovement : MonoBehaviour
         x = transform.position.x + 102.38f / (stops);
         for (int i = 1; i <= stops; i++)
         {
-            Instantiate(BusStop, new Vector3(i * 102.38f/(stops) , 0, 0), Quaternion.identity);
+            BusStops.Add(Instantiate(BusStop, new Vector3(i * 102.38f/(stops) , 0, 0), Quaternion.identity));
 
         }
 
@@ -61,6 +63,12 @@ public class BusMovement : MonoBehaviour
     private IEnumerator endgamewait()
     {
         yield return new WaitForSeconds(7f);
+        for (int i = 1; i <= stops; i++)
+        {
+            Destroy(BusStops[i-1]);
+
+
+        }
         SpawnBusManager.GetComponent<SpawnManagerBus>().endgame();
     }
 }
