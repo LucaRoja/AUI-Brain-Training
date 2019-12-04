@@ -1,37 +1,43 @@
 fileFormatVersion: 2
-guid: 09689c75d72114f16b7e70ee6651d426
+guid: eb1f8e517bffd49f3902302e305ff049
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3193495631413280178
-    second: Shapes-Outline_0
+      213: -3475545510960775275
+    second: Shapes-Black&White_0
   - first:
-      213: -2896573460005818535
-    second: Shapes-Outline_1
+      213: -7666412901302336926
+    second: Shapes-Black&White_1
   - first:
-      213: 1783371652330846262
-    second: Shapes-Outline_2
+      213: 4371839903027428116
+    second: Shapes-Black&White_2
   - first:
-      213: 2100314349153242538
-    second: Shapes-Outline_3
+      213: 558320514450689937
+    second: Shapes-Black&White_3
   - first:
-      213: -2134662300758403144
-    second: Shapes-Outline_4
+      213: -5043973341896196451
+    second: Shapes-Black&White_4
   - first:
-      213: 6283172051213110393
-    second: Shapes-Outline_5
+      213: -3309578491158231183
+    second: Shapes-Black&White_5
   - first:
-      213: -7411747832534151787
-    second: Shapes-Outline_6
+      213: 8591215256252950853
+    second: Shapes-Black&White_6
   - first:
-      213: 4786246159525969084
-    second: Shapes-Outline_7
+      213: -7035233731067712096
+    second: Shapes-Black&White_7
   - first:
-      213: -5025217874050967963
-    second: Shapes-Outline_8
+      213: -865714603858612396
+    second: Shapes-Black&White_8
   - first:
-      213: -7951789777083476136
-    second: Shapes-Outline_9
+      213: -300560353381473082
+    second: Shapes-Black&White_9
+  - first:
+      213: -2875934794657054222
+    second: Shapes-Black&White_10
+  - first:
+      213: -5609892931215572555
+    second: Shapes-Black&White_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shapes-Outline_0
+      name: Shapes-Black&White_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 1427
-        width: 967
-        height: 919
+        x: 0
+        y: 1308
+        width: 965
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,19 +136,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee9ee39a7f564470a784feb1ac78142
-      internalID: -3193495631413280178
+      spriteID: 99f73fd48a7254bb0b22110ce91a98ec
+      internalID: -3475545510960775275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-Outline_1
+      name: Shapes-Black&White_1
       rect:
         serializedVersion: 2
-        x: 1288
-        y: 1433
-        width: 930
+        x: 1209
+        y: 1315
+        width: 933
         height: 808
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -151,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18a26b1f273e24096b9f7f1f6e5602b2
-      internalID: -2896573460005818535
+      spriteID: 6251cc068131c46dfae91e5bdad10745
+      internalID: -7666412901302336926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-Outline_2
+      name: Shapes-Black&White_2
       rect:
         serializedVersion: 2
-        x: 2487
-        y: 1502
-        width: 1228
-        height: 719
+        x: 2409
+        y: 1384
+        width: 1230
+        height: 722
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f70ff0e2007543fab611e754094ed81
-      internalID: 1783371652330846262
+      spriteID: 1eb779c5ca64c42ae927375db7f0bd5e
+      internalID: 4371839903027428116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-Outline_3
+      name: Shapes-Black&White_3
       rect:
         serializedVersion: 2
-        x: 3828
-        y: 1421
-        width: 475
-        height: 928
+        x: 3751
+        y: 1302
+        width: 478
+        height: 930
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 685e1858509104a0982c9d7a906bec61
-      internalID: 2100314349153242538
+      spriteID: 5c2c4df12a9764641bb44eff0aaf05ac
+      internalID: 558320514450689937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-Outline_4
+      name: Shapes-Black&White_4
       rect:
         serializedVersion: 2
-        x: 4628
-        y: 1705
-        width: 1046
-        height: 528
+        x: 4549
+        y: 1585
+        width: 1049
+        height: 531
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 945aa543bdcc14e5dbf54a3779daae52
-      internalID: -2134662300758403144
+      spriteID: 4f9e4c6154531494f927850d78f84007
+      internalID: -5043973341896196451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-Outline_5
+      name: Shapes-Black&White_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 201
-        width: 927
-        height: 927
+        x: 5935
+        y: 1440
+        width: 819
+        height: 813
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +241,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a56568a577a554b67bdd013f7e94fd0f
-      internalID: 6283172051213110393
+      spriteID: 38b616cffe2c74c85919125169f8801d
+      internalID: -3309578491158231183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-Outline_6
+      name: Shapes-Black&White_6
       rect:
         serializedVersion: 2
-        x: 1467
-        y: 213
-        width: 542
-        height: 927
+        x: 2
+        y: 81
+        width: 929
+        height: 930
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +262,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73fb359b741b64a68a570a763d30c950
-      internalID: -7411747832534151787
+      spriteID: 25739db526fd8442d8a4e4dcb9e12ffa
+      internalID: 8591215256252950853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-Outline_7
+      name: Shapes-Black&White_7
       rect:
         serializedVersion: 2
-        x: 2481
-        y: 222
-        width: 919
-        height: 918
+        x: 1390
+        y: 94
+        width: 544
+        height: 930
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14d67e48fc960434c8065df712ba10f9
-      internalID: 4786246159525969084
+      spriteID: 1275c9092eabb4c28a9ed46ec241dc35
+      internalID: -7035233731067712096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-Outline_8
+      name: Shapes-Black&White_8
       rect:
         serializedVersion: 2
-        x: 3672
-        y: 517
-        width: 933
-        height: 328
+        x: 2403
+        y: 104
+        width: 920
+        height: 920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,19 +304,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a14dfafcb79e34762bf59ec45e432bf0
-      internalID: -5025217874050967963
+      spriteID: 2912fc66a5c074609b902b753c895695
+      internalID: -865714603858612396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shapes-Outline_9
+      name: Shapes-Black&White_9
       rect:
         serializedVersion: 2
-        x: 4860
-        y: 239
-        width: 1019
+        x: 3595
+        y: 398
+        width: 935
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03279fd7c28b4ab9bc432648168c9ee
+      internalID: -300560353381473082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-Black&White_10
+      rect:
+        serializedVersion: 2
+        x: 4781
+        y: 120
+        width: 1022
         height: 884
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -319,8 +346,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5425801db4d594f3d9a820ed4ade6f8a
-      internalID: -7951789777083476136
+      spriteID: 12d12c8295b9b4b2c9815a797c456c17
+      internalID: -2875934794657054222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shapes-Black&White_11
+      rect:
+        serializedVersion: 2
+        x: 5935
+        y: 0
+        width: 814
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b6a8f38d7084a2dbcde1139ae6cc87
+      internalID: -5609892931215572555
       vertices: []
       indices: 
       edges: []
