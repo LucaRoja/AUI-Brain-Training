@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class AudioManager : MonoSingleton<AudioManager>
+//Singleton<AudioManager>
+public class AudioManager : MonoBehaviour
 {
     public AudioSource BackgroundMusic;
     public AudioSource SoundEffect;
@@ -17,6 +17,7 @@ public class AudioManager : MonoSingleton<AudioManager>
     
     public void gameWon()
     {
+        Debug.Log(CheerSound != null);
             SoundEffect.PlayOneShot(CheerSound);
     }
     
