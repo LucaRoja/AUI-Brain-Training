@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 371988720820516982}
   - component: {fileID: 1190970623685074987}
   - component: {fileID: 3117232022852159956}
-  - component: {fileID: 209463804}
-  - component: {fileID: 209463803}
+  - component: {fileID: -7798561974107427895}
   m_Layer: 0
   m_Name: Character-Orange_0
   m_TagString: Untagged
@@ -103,50 +102,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &209463804
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673477462520626709}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!234 &209463803
-SliderJoint2D:
+--- !u!114 &-7798561974107427895
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673477462520626709}
   m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -8.111871, y: -1.3063545}
-  m_AutoConfigureAngle: 1
-  m_Angle: 91.016594
-  m_UseMotor: 1
-  m_Motor:
-    m_MotorSpeed: -2
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 1
-  m_TranslationLimits:
-    m_LowerTranslation: 0
-    m_UpperTranslation: 100
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d763522f0a570495d8241082d7f13e07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bus: {fileID: 8007394269413540487, guid: 0c801476f03b146018d6b4505f731f45, type: 3}
