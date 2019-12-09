@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     private Color color;
     private Renderer clickedRenderer;
 
-    public int SpawnNumber = 6;
+    public int SpawnNumber = 12;
     public GameObject SpawnManager;
     public GameObject AudioManager;
     public bool bounce = false;
@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
         SpawnManager.GetComponent<SpawnManager>().bounce = bounce;
         SpawnManager.GetComponent<SpawnManager>()._lower_velocity = _lower_velocity;
         SpawnManager.GetComponent<SpawnManager>()._upper_velocity = _upper_velocity;
-
     }
 
     // Update is called once per frame
@@ -36,6 +35,7 @@ public class GameManager : MonoBehaviour
         if (hit.collider != null && first && Input.GetMouseButtonDown(0))
         {
             clicked = hit.transform.gameObject;
+            clicked.GetComponent<Movement>().follow = true;
             first = false;
             //Get the Renderer component from the new cube
             clickedRenderer = clicked.GetComponent<Renderer>();
@@ -57,11 +57,13 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                clicked.GetComponent<Movement>().follow = false;
                 clickedRenderer.material.SetColor("_Color", color);
             }
         }
         if(destroyed == SpawnNumber)
         {
+            destroyed = 0;
             Destroy(SpawnManager);
             RestartManager.gameOver();
             AudioManager.GetComponent<AudioManager>().gameWon();

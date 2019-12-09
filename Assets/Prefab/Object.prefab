@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -214819117217935259}
   - component: {fileID: 5181448050870671082}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Object
   m_TagString: Circle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4554861733027606857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.18, y: 0.18, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7475264431263090707, guid: f80bbc951c839c54ba2313e6d6ce0f05,
+  m_Sprite: {fileID: -6486392967060590482, guid: 9720236450c964b00afc72841679ca87,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e56087db4f588147ad6f1b500177ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoving: 1
+  follow: 0
   _lower_velocity: 3
   _upper_velocity: 6
   _direction: {x: 0, y: 0, z: 0}
@@ -131,12 +131,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.47}
+    oldSize: {x: 7.56, y: 10.37541}
     newSize: {x: 1.5, y: 1.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.47}
+  m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0

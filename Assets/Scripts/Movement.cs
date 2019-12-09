@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public bool isMoving = true;
+    public bool follow = false;
 
     public float _lower_velocity = 3.0f;
     public float _upper_velocity = 6.0f;
@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     private float velocity = 5.0f;
 
     private Transform _tr;
+    private Vector2 mouseposition;
 
     public Vector3 _direction;
 
@@ -39,9 +40,15 @@ public class Movement : MonoBehaviour
     void Update()
     {
         // used for debugging and testing purposes
-        if (isMoving)
+        if (!follow)
             _tr.position =
                 _tr.position + _direction * velocity * Time.deltaTime;
+        /*else
+        {
+            mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            _tr.position = new Vector3(mouseposition.x, mouseposition.y);
+        }
+        */
     }
 
     public void Destroy()

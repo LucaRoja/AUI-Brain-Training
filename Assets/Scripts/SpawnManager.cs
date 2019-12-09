@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject Square;
-    public GameObject Triangle;
-    public GameObject Circle;
-    public GameObject Rectangle;
-    public GameObject Elipse;
-    public GameObject Star;
-    private List<GameObject> spawnPrefabs = new List<GameObject>();
+    public GameObject Object;
+    public List<Sprite> sprites = new List<Sprite>();
     private GameObject go;
 
     ScreenLimits screenLimits;
@@ -31,25 +26,22 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        spawnPrefabs.Add(Square);
-        spawnPrefabs.Add(Triangle);
-        spawnPrefabs.Add(Circle);
-        spawnPrefabs.Add(Rectangle);
-        spawnPrefabs.Add(Elipse);
-        spawnPrefabs.Add(Star);
-
         for(int i = 0; i < SpawnNumber; i++)
         {
-            int j = UnityEngine.Random.Range(0, spawnPrefabs.Count);
-            go = Instantiate(spawnPrefabs[j], screen.Random(), Quaternion.identity);
+            int j = UnityEngine.Random.Range(0, sprites.Count);
+            go = Instantiate(Object, screen.Random(), Quaternion.identity);
+            go.GetComponent<SpriteRenderer>().sprite = sprites[j];
+            go.name = "Object" + i;
             go.GetComponent<ScreenLimits>().bounce = bounce;
             go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
             go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-            go = Instantiate(spawnPrefabs[j], screen.Random(), Quaternion.identity);
+            go = Instantiate(Object, screen.Random(), Quaternion.identity);
+            go.GetComponent<SpriteRenderer>().sprite = sprites[j];
+            go.name = "Object" + i;
             go.GetComponent<ScreenLimits>().bounce = bounce;
             go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
             go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
-            spawnPrefabs.Remove(spawnPrefabs[j]);
+            sprites.Remove(sprites[j]);
         }
     }
 }

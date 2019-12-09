@@ -17,7 +17,6 @@ public class AudioManager : MonoBehaviour
     
     public void gameWon()
     {
-        Debug.Log(CheerSound != null);
             SoundEffect.PlayOneShot(CheerSound);
     }
     
