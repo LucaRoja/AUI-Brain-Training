@@ -18,9 +18,14 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     public List<GameObject> spawned = new List<GameObject>();
     public int SpawnsPerStop = 4;
     public int UnspawnsPerStop = 2;
+    public bool _cold = false;
     public bool _egg = false;
-    public bool _star = false;
+    public bool _lightblue = false;
     public bool _orange = false;
+    public bool _pentagon = false;
+    public bool _sassypink = false;
+    public bool _star = false;
+
 
     private GameObject _EndGameMenu;
 
@@ -179,34 +184,59 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     {
         for(int i = 0; i < spawned.Count; i++)
         {
+            if (spawned[i].name == "Character_Cold(Clone)")
+                _cold = !_cold;
             if (spawned[i].name == "Character_Egg(Clone)")
                 _egg = !_egg;
-            if (spawned[i].name == "Character_Star(Clone)")
-                _star = !_star;
+            if (spawned[i].name == "Character_LightBlue(Clone)")
+                _lightblue = !_lightblue;
             if (spawned[i].name == "Character_Orange(Clone)")
                 _orange = !_orange;
+            if (spawned[i].name == "Character_Pentagon(Clone)")
+                _pentagon = !_pentagon;
+            if (spawned[i].name == "Character_SassyPink(Clone)")
+                _sassypink = !_sassypink;
+            if (spawned[i].name == "Character_Star(Clone)")
+                _star = !_star;
+
         }
-        if (_egg || _orange || _star)
+        if (_cold || _egg || _lightblue || _orange || _pentagon || _sassypink || _star)
         {
             Debug.Log("you suck");
         }
         else
             Debug.Log("Yay");
     }
+
+
     #region ToggleFUNctions
+    public void coldpress()
+    {
+        _cold = !_cold;
+    }
     public void eggpress()
     {
         _egg = !_egg;
     }
-
-    public void starpress()
+    public void lightbluepress()
     {
-        _star = !_star;
+        _lightblue = !_lightblue;
     }
-
     public void orangepress()
     {
         _orange = !_orange;
+    }
+    public void pentagonpress()
+    {
+        _pentagon = !_pentagon;
+    }
+    public void sassypinkpress()
+    {
+        _sassypink = !_sassypink;
+    }
+    public void starpress()
+    {
+        _star = !_star;
     }
 
     #endregion
