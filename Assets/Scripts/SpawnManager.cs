@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject Object;
+    public GameObject GameManager;
     public List<Sprite> sprites = new List<Sprite>();
     private GameObject go;
 
@@ -15,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     public float _lower_velocity = 3.0f;
     public float _upper_velocity = 6.0f;
 
-    public Screen screen;
+    public Screen2 screen;
     // Start is called before the first frame update
     void Awake()
     {
@@ -35,12 +36,14 @@ public class SpawnManager : MonoBehaviour
             go.GetComponent<ScreenLimits>().bounce = bounce;
             go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
             go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
+            go.GetComponent<Movement>().GameManager = GameManager;
             go = Instantiate(Object, screen.Random(), Quaternion.identity);
             go.GetComponent<SpriteRenderer>().sprite = sprites[j];
             go.name = "Object" + i;
             go.GetComponent<ScreenLimits>().bounce = bounce;
             go.GetComponent<Movement>()._lower_velocity = _lower_velocity;
             go.GetComponent<Movement>()._upper_velocity = _upper_velocity;
+            go.GetComponent<Movement>().GameManager = GameManager;
             sprites.Remove(sprites[j]);
         }
     }

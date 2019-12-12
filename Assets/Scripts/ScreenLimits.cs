@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScreenLimits : MonoBehaviour
 {
-    public Screen screen;
+    public Screen2 screen;
     public bool bounce = false;
     private float max_x;
     private float max_y;

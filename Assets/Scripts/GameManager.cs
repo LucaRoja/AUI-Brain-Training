@@ -5,8 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private GameObject clicked;
-    private Color color;
+    private GameObject clicked2;
+    private Color color1;
+    private Color color2;
     private Renderer clickedRenderer;
+    private bool once = true;
 
     public int SpawnNumber = 12;
     public GameObject SpawnManager;
@@ -16,13 +19,15 @@ public class GameManager : MonoBehaviour
     public float _upper_velocity = 6.0f;
 
     private bool first = true;
-    private int destroyed = 0;
-
+    private bool second = false;
+    public int destroyed = 0;
+        
 
     void Awake()
     {
         SpawnManager = Instantiate(SpawnManager);
         SpawnManager.GetComponent<SpawnManager>().SpawnNumber = SpawnNumber;
+        SpawnManager.GetComponent<SpawnManager>().GameManager = gameObject;
         SpawnManager.GetComponent<SpawnManager>().bounce = bounce;
         SpawnManager.GetComponent<SpawnManager>()._lower_velocity = _lower_velocity;
         SpawnManager.GetComponent<SpawnManager>()._upper_velocity = _upper_velocity;
@@ -32,7 +37,30 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        if (hit.collider != null && first && Input.GetMouseButtonDown(0))
+        if (hit.collider != null && Input.GetMouseButtonDown(0))
+        {
+            if (first)
+            {
+                clicked = hit.transform.gameObject;
+                clicked.GetComponent<Movement>().follow = true;
+                clicked.GetComponent<Rigidbody2D>().isKinematic = false;
+                first = false;
+                clicked.GetComponent<Movement>().first = true;
+                color1 = clicked.GetComponent<Renderer>().material.GetColor("_Color");
+                clicked.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
+            }
+            else if(!second && hit.transform.gameObject != clicked)
+            {
+                clicked2 = hit.transform.gameObject;
+                clicked2.GetComponent<Movement>().follow = true;
+                clicked2.GetComponent<Rigidbody2D>().isKinematic = false;
+                second = true;
+                color2 = clicked2.GetComponent<Renderer>().material.GetColor("_Color");
+                clicked2.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
+            }
+        }
+
+       /* if (hit.collider != null && first && Input.GetMouseButtonDown(0))
         {
             clicked = hit.transform.gameObject;
             clicked.GetComponent<Movement>().follow = true;
@@ -61,7 +89,8 @@ public class GameManager : MonoBehaviour
                 clickedRenderer.material.SetColor("_Color", color);
             }
         }
-        if(destroyed == SpawnNumber)
+        */
+        if (destroyed == SpawnNumber)
         {
             destroyed = 0;
             Destroy(SpawnManager);
@@ -69,5 +98,33 @@ public class GameManager : MonoBehaviour
             AudioManager.GetComponent<AudioManager>().gameWon();
         }
     }
+    public void weCollided(bool right)
+    {
+        if (once)
+        {
+            once = false;
+            if (right)
+            {
+                destroyed++;
+                first = true;
+                second = false;
+            }
+            else
+            {
+                first = true;
+                second = false;
+                clicked.GetComponent<Movement>().follow = false;
+                clicked.GetComponent<Renderer>().material.SetColor("_Color", color1);
+                clicked.GetComponent<Movement>().first = false;
+                clicked.GetComponent<Rigidbody2D>().isKinematic = true;
+                clicked2.GetComponent<Movement>().follow = false;
+                clicked2.GetComponent<Renderer>().material.SetColor("_Color", color1);
+                clicked2.GetComponent<Rigidbody2D>().isKinematic = true;
+            }
+        }
+        else
+            once = true;
+    }
+
 
 }
