@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: 108301fe8b80941909d9a8a093ba4e6d
+guid: 31d1b53db177b49a0a56b3f1887fe3ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 899765322359383134
-    second: Character_BucketHat_0
+      213: 5987857158958810513
+    second: Character_TopHat_0
   - first:
-      213: -4165309617242069601
-    second: Character_BucketHat_1
+      213: -2055433089865174189
+    second: Character_TopHat_1
   - first:
-      213: 7327078173295418851
-    second: Character_BucketHat_2
+      213: -1053963621920594068
+    second: Character_TopHat_2
   - first:
-      213: 4170793714225881499
-    second: Character_BucketHat_3
+      213: 3045980420391767701
+    second: Character_TopHat_3
   - first:
-      213: 806178197612010908
-    second: Character_BucketHat_4
+      213: -2345125130962789838
+    second: Character_TopHat_4
   - first:
-      213: -2850618221996262239
-    second: Character_BucketHat_5
+      213: -4751946056210398067
+    second: Character_TopHat_5
   - first:
-      213: -9222548862746864901
-    second: Character_BucketHat_6
+      213: 7199132633857962130
+    second: Character_TopHat_6
   - first:
-      213: -2669402253151321045
-    second: Character_BucketHat_7
+      213: 715755938907306594
+    second: Character_TopHat_7
   - first:
-      213: -1455540188047506234
-    second: Character_BucketHat_8
+      213: -5166621072608919162
+    second: Character_TopHat_8
   - first:
-      213: 1368623555793702311
-    second: Character_BucketHat_9
+      213: 3836541990671821281
+    second: Character_TopHat_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character_BucketHat_0
+      name: Character_TopHat_0
       rect:
         serializedVersion: 2
         x: 0
         y: 5
-        width: 605
-        height: 837
+        width: 513
+        height: 1144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67c3d8cbe44964ad3ac8e036535f7f5e
-      internalID: 899765322359383134
+      spriteID: 1cae05d55c62047b19008180d6f7fe38
+      internalID: 5987857158958810513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_BucketHat_1
+      name: Character_TopHat_1
       rect:
         serializedVersion: 2
-        x: 706
+        x: 731
         y: 2
-        width: 618
-        height: 801
+        width: 515
+        height: 1115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7859fb912652411dbd694bb3819104f
-      internalID: -4165309617242069601
+      spriteID: 4bd24f1e009c44542aaccb2f8a6e39b3
+      internalID: -2055433089865174189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_BucketHat_2
+      name: Character_TopHat_2
       rect:
         serializedVersion: 2
-        x: 1407
+        x: 1372
         y: 2
-        width: 639
-        height: 875
+        width: 515
+        height: 1186
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aadf3ae8ece6c49e48cca6113a34a9e1
-      internalID: 7327078173295418851
+      spriteID: cc2affb52c13345c7b2d74ab3387a469
+      internalID: -1053963621920594068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_BucketHat_3
+      name: Character_TopHat_3
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 2091
         y: 0
-        width: 639
-        height: 934
+        width: 568
+        height: 1226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d24d443984036488fa268e24c70d5525
-      internalID: 4170793714225881499
+      spriteID: f46a646b42e124971b9002c0da8a6bfb
+      internalID: 3045980420391767701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_BucketHat_4
+      name: Character_TopHat_4
       rect:
         serializedVersion: 2
-        x: 2884
+        x: 2842
         y: 2
-        width: 650
-        height: 912
+        width: 658
+        height: 1208
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d779cf3f2db83411f99d80fc362c429f
-      internalID: 806178197612010908
+      spriteID: 7c8747901fa264e9f991af7d68a3bc46
+      internalID: -2345125130962789838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_BucketHat_5
+      name: Character_TopHat_5
       rect:
         serializedVersion: 2
-        x: 3678
+        x: 3679
         y: 5
-        width: 607
-        height: 848
+        width: 518
+        height: 1158
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc359e232261b402380d452c3d0dc01f
-      internalID: -2850618221996262239
+      spriteID: 580fddc0856864650895fbec90cf0fdf
+      internalID: -4751946056210398067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_BucketHat_6
+      name: Character_TopHat_6
       rect:
         serializedVersion: 2
-        x: 4432
+        x: 4426
         y: 2
-        width: 618
-        height: 808
+        width: 519
+        height: 1121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2328d2bd89324464a9e6401a3509df56
-      internalID: -9222548862746864901
+      spriteID: 63e145cf603b24670af7e2b53f01c57c
+      internalID: 7199132633857962130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_BucketHat_7
+      name: Character_TopHat_7
       rect:
         serializedVersion: 2
-        x: 5176
+        x: 5102
         y: 2
-        width: 640
-        height: 887
+        width: 515
+        height: 1179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e40e54bada5a846ac8c4799c9694c4c7
-      internalID: -2669402253151321045
+      spriteID: 6ba3d36f179e943ad8f1629c2eda59c5
+      internalID: 715755938907306594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_BucketHat_8
+      name: Character_TopHat_8
       rect:
         serializedVersion: 2
-        x: 5909
+        x: 5825
         y: 0
-        width: 636
-        height: 934
+        width: 565
+        height: 1226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55b3682f5d5464938b9fcdb8dcae52ac
-      internalID: -1455540188047506234
+      spriteID: 951792eb28db7456eaee441ee9602b02
+      internalID: -5166621072608919162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_BucketHat_9
+      name: Character_TopHat_9
       rect:
         serializedVersion: 2
-        x: 6714
+        x: 6640
         y: 0
-        width: 645
-        height: 934
+        width: 685
+        height: 1226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,8 +319,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cca1d5b7a9fd043c9bbcd4cd30e84ec2
-      internalID: 1368623555793702311
+      spriteID: f5a0c2bcfb0a946eaabbe2136af317f5
+      internalID: 3836541990671821281
       vertices: []
       indices: 
       edges: []
