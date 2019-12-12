@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: ed77f73d71484480d841c9d5d9ab746c
+guid: ce36e9ecd2cd04373b44f75a5352e392
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5788756486928072846
-    second: 01_bird_flying_0
+      213: -7447772059896168661
+    second: Bird_Flying_0
   - first:
-      213: 7875904466060338672
-    second: 01_bird_flying_1
+      213: -1066253626359077981
+    second: Bird_Flying_1
   - first:
-      213: 4129553775582211598
-    second: 01_bird_flying_2
+      213: -9049872533067566374
+    second: Bird_Flying_2
   - first:
-      213: -3308534834159295620
-    second: 01_bird_flying_3
+      213: -8780024704081241696
+    second: Bird_Flying_3
   - first:
-      213: 7654770248026727528
-    second: 01_bird_flying_4
+      213: -6046862315432116914
+    second: Bird_Flying_4
   - first:
-      213: -90406583097792702
-    second: 01_bird_flying_5
+      213: -6360695335567130499
+    second: Bird_Flying_5
   - first:
-      213: -2539756918119497151
-    second: 01_bird_flying_6
+      213: -7521459142871302459
+    second: Bird_Flying_6
   - first:
-      213: 3812410107659350153
-    second: 01_bird_flying_7
+      213: 5108764399823562096
+    second: Bird_Flying_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 01_bird_flying_0
+      name: Bird_Flying_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 279
+        width: 281
         height: 367
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,40 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89f59032315d7498e9bef5f486c2ad62
-      internalID: -5788756486928072846
+      spriteID: 99d057087388148f8be9923d4d7fad7b
+      internalID: -7447772059896168661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 01_bird_flying_1
+      name: Bird_Flying_1
       rect:
         serializedVersion: 2
         x: 284
         y: 0
         width: 332
-        height: 366
-      alignment: 9
-      pivot: {x: 0.47440827, y: 0.50717086}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17039b9aa4a044d3290770eadd1122b7
-      internalID: 7875904466060338672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 01_bird_flying_2
-      rect:
-        serializedVersion: 2
-        x: 634
-        y: 0
-        width: 291
         height: 367
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 431a1cc7c11e84b9da402775b1c8edd1
-      internalID: 4129553775582211598
+      spriteID: 4173a6a0fef514d4c9010610b9e52923
+      internalID: -1066253626359077981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 01_bird_flying_3
+      name: Bird_Flying_2
       rect:
         serializedVersion: 2
-        x: 934
+        x: 647
         y: 0
-        width: 298
+        width: 274
         height: 367
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -187,19 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae58eca07b5cb4d05866f902663fb630
-      internalID: -3308534834159295620
+      spriteID: d1f66e305b4b141d2929320fab69939c
+      internalID: -9049872533067566374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 01_bird_flying_4
+      name: Bird_Flying_3
       rect:
         serializedVersion: 2
-        x: 1255
+        x: 931
         y: 0
-        width: 313
+        width: 301
         height: 367
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -208,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80f1ba1f850c84e1da8204385ab02075
-      internalID: 7654770248026727528
+      spriteID: a48f8b2de29d443938e375fe0025b96b
+      internalID: -8780024704081241696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 01_bird_flying_5
+      name: Bird_Flying_4
       rect:
         serializedVersion: 2
-        x: 1579
+        x: 1250
         y: 0
-        width: 321
-        height: 367
+        width: 316
+        height: 361
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,19 +208,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e929261749992430ba7d070a1a391309
-      internalID: -90406583097792702
+      spriteID: bd31302f93c72425980f0de6b48aed16
+      internalID: -6046862315432116914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 01_bird_flying_6
+      name: Bird_Flying_5
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 0
+        width: 326
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdec121069de47a38124dcc70e3d26e
+      internalID: -6360695335567130499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Flying_6
       rect:
         serializedVersion: 2
         x: 1902
         y: 0
-        width: 293
+        width: 287
         height: 367
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -250,19 +250,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f44d57c19c5094c67bdada5400ce1d51
-      internalID: -2539756918119497151
+      spriteID: 2c806728cf4fa44c49b51f3e925e0b7a
+      internalID: -7521459142871302459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 01_bird_flying_7
+      name: Bird_Flying_7
       rect:
         serializedVersion: 2
-        x: 2208
+        x: 2202
         y: 0
-        width: 257
+        width: 263
         height: 367
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b66f82bce5424b85a97b2aa28236b3a
-      internalID: 3812410107659350153
+      spriteID: 059a729f1e5cc45ebbae0c8f2fa08f73
+      internalID: 5108764399823562096
       vertices: []
       indices: 
       edges: []
