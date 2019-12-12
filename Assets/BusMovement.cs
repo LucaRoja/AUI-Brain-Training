@@ -22,10 +22,10 @@ public class BusMovement : MonoBehaviour
 
     void Start()
     {
-        x = transform.position.x + 102.38f / (stops);
+        x = transform.position.x + 200f / (stops);
         for (int i = 1; i <= stops; i++)
         {
-            BusStops.Add(Instantiate(BusStop, new Vector3(i * 102.38f/(stops) , 0, 0), Quaternion.identity));
+            BusStops.Add(Instantiate(BusStop, new Vector3(i * 200f / (stops) - 5, -0.64f, 0), Quaternion.identity));
 
         }
 
@@ -49,7 +49,7 @@ public class BusMovement : MonoBehaviour
                 go = false;
                 manager.TestSpawn();
                 currentstop++;
-                x = transform.position.x + 102.38f / (stops);
+                x = transform.position.x + 200f / (stops);
                 }
 
 

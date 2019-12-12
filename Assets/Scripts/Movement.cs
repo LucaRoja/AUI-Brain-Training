@@ -6,6 +6,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public bool follow = false;
+    public bool first = false;
 
     public float _lower_velocity = 3.0f;
     public float _upper_velocity = 6.0f;
@@ -14,11 +15,13 @@ public class Movement : MonoBehaviour
 
     private Transform _tr;
     private Vector2 mouseposition;
+    public GameObject GameManager;
 
     public Vector3 _direction;
 
     void Awake()
     {
+        GetComponent<Rigidbody2D>().isKinematic = true;
         _tr = GetComponent<Transform>();
     }
 
@@ -41,19 +44,42 @@ public class Movement : MonoBehaviour
     {
         // used for debugging and testing purposes
         if (!follow)
+        {
             _tr.position =
                 _tr.position + _direction * velocity * Time.deltaTime;
-        /*else
+                
+        }
+        else if (first)
+        {
+            return;
+        } 
+        else
         {
             mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _tr.position = new Vector3(mouseposition.x, mouseposition.y);
         }
-        */
     }
 
     public void Destroy()
     {
         // AudioManager.Instance.ExplosionSound();
         Destroy(gameObject);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (follow && collision.gameObject.GetComponent<Movement>().follow)
+        {
+            if (collision.gameObject.name == gameObject.name)
+            {
+                GameManager.GetComponent<GameManager>().weCollided(true);
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                GameManager.GetComponent<GameManager>().weCollided(false);
+            }
+        }
     }
 }

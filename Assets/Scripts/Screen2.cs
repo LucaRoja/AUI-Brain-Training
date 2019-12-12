@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "DogFight/Screen")]
-public class Screen : ScriptableObject
+public class Screen2 : ScriptableObject
 {
     [Header("Screen Parameter")]
     public float Width;
