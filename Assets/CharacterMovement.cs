@@ -20,7 +20,7 @@ public class CharacterMovement : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
         //Debug.Log(bus.GetComponent<Transform>().position.x);
-        if (bus.GetComponent<Transform>().position.x >= transform.position.x && firstspawned)
+        if (bus.GetComponent<Transform>().position.x + 1.5f  >= transform.position.x && firstspawned)
             gameObject.SetActive(false);
         else if (transform.position.x < bus.GetComponent<Transform>().position.x - 10)
             {

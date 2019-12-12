@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6035359852010580719}
   - component: {fileID: -1313360877054309355}
   m_Layer: 0
-  m_Name: Character-Egg_0
+  m_Name: Character_Egg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: -5640074339219010736, guid: f1640e9014da1487baeb3be8e7561cf4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -115,3 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bus: {fileID: 8007394269413540487, guid: 0c801476f03b146018d6b4505f731f45, type: 3}
+  firstspawned: 0

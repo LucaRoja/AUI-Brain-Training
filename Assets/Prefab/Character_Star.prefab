@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6156061074122316077}
   - component: {fileID: 2973153740980764183}
   m_Layer: 0
-  m_Name: Character-Star_0
+  m_Name: Character_Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 7726541891056055157, guid: 5e4a25f0bcbb6449bad8879a7fa3fa3c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -115,3 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bus: {fileID: 8007394269413540487, guid: 0c801476f03b146018d6b4505f731f45, type: 3}
+  firstspawned: 0

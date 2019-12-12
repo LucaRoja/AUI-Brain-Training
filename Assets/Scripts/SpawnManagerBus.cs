@@ -48,7 +48,7 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 
         if (spawnPrefabs.Count > 0)
         {
-            Vector3 spawnposition = new Vector3(bus.transform.position.x + 10, bus.transform.position.y, 0);
+            Vector3 spawnposition = new Vector3(bus.transform.position.x + 12, bus.transform.position.y, 0);
             TempGameObject = Instantiate(spawnPrefabs[spawnPrefabIndex], spawnposition, Quaternion.identity);
             Debug.Log(TempGameObject.name);
             TempGameObject.GetComponent<CharacterMovement>().bus = bus;
@@ -63,8 +63,6 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 
     public void UnSpawn()
     {
-        //int spawnnum = 
-
 
 
         if ( spawned.Count > 1)
@@ -72,7 +70,7 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
             GameObject g = spawned[UnityEngine.Random.Range(0, spawned.Count)];
             g.GetComponent<CharacterMovement>().firstspawned = false;
             g.SetActive(true);
-            g.transform.position = new Vector3(bus.transform.position.x, g.transform.position.y, 0) ;
+            g.transform.position = new Vector3(bus.transform.position.x + 1.5f, g.transform.position.y, 0) ;
             //Instantiate(g, bus.transform.position, Quaternion.identity);
             spawned.Remove(g);
             //StartCoroutine(RemovePlayer(g));
