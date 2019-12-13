@@ -38,12 +38,12 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     void Start()
     {
         _EndGameMenu = GameObject.Find("EndGameMenu");
-        _ResultText = GameObject.Find("_ResultText");
+        _ResultText = GameObject.Find("ResultText");
 
         _EndGameMenu.SetActive(false);
         bus.GetComponent<BusMovement>().manager = this;
 
-        
+        _ResultText.SetActive(false);
 
     }
 
@@ -59,7 +59,7 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
         {
             Vector3 spawnposition = new Vector3(bus.transform.position.x + 12, bus.transform.position.y, 0);
             TempGameObject = Instantiate(spawnPrefabs[spawnPrefabIndex], spawnposition, Quaternion.identity);
-            Debug.Log(TempGameObject.name);
+            TempGameObject.GetComponent<CharacterMovement>().SpawnBusManager = gameObject;
             TempGameObject.GetComponent<CharacterMovement>().bus = bus;
             TempGameObject.GetComponent<CharacterMovement>().firstspawned = true;
             spawned.Add(TempGameObject);
@@ -213,19 +213,19 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
                 _sassypink = !_sassypink;
             if (spawned[i].name == "Character_Star(Clone)")
                 _star = !_star;
-            if (spawned[i].name == "Character(_TopHatClone)")
+            if (spawned[i].name == "Character_TopHat(Clone)")
                 _tophat = !_tophat;
 
         }
         _EndGameMenu.SetActive(false);
-        _ResultText.SetActive(true);
         if ( _buckethat || _cold || _egg || _flower || _glasses || _jenny || _lightblue || _pentagon || _royal || _sassypink || _star || _tophat )
         {
             _ResultText.GetComponent<Text>().text = "Try Again!";
 
         }
         else
-        _ResultText.GetComponent<Text>().text = "Try Again!";
+        _ResultText.GetComponent<Text>().text = "You did it!";
+        _ResultText.SetActive(true);
     }
 
 
