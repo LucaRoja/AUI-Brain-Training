@@ -18,22 +18,31 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     public List<GameObject> spawned = new List<GameObject>();
     public int SpawnsPerStop = 4;
     public int UnspawnsPerStop = 2;
+    public float _CharacterSpeed = -2;
+    public bool _buckethat = false;
     public bool _cold = false;
     public bool _egg = false;
+    public bool _flower = false;
+    public bool _glasses = false;
+    public bool _jenny = false;
     public bool _lightblue = false;
-    public bool _orange = false;
     public bool _pentagon = false;
+    public bool _royal = false;
     public bool _sassypink = false;
     public bool _star = false;
+    public bool _tophat = false;
 
-
+    private GameObject _ResultText;
     private GameObject _EndGameMenu;
 
     void Start()
     {
         _EndGameMenu = GameObject.Find("EndGameMenu");
+        _ResultText = GameObject.Find("_ResultText");
+
         _EndGameMenu.SetActive(false);
         bus.GetComponent<BusMovement>().manager = this;
+
         
 
     }
@@ -182,32 +191,49 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     {
         for(int i = 0; i < spawned.Count; i++)
         {
+            if (spawned[i].name == "Character_BucketHat(Clone)")
+                _buckethat = !_buckethat;
             if (spawned[i].name == "Character_Cold(Clone)")
                 _cold = !_cold;
             if (spawned[i].name == "Character_Egg(Clone)")
                 _egg = !_egg;
+            if (spawned[i].name == "Character_Flower(Clone)")
+                _flower = !_flower;
+            if (spawned[i].name == "Character_Glasses(Clone)")
+                _glasses = !_glasses;
+            if (spawned[i].name == "Character_Jenny(Clone)")
+                _jenny = !_jenny;
             if (spawned[i].name == "Character_LightBlue(Clone)")
                 _lightblue = !_lightblue;
-            if (spawned[i].name == "Character_Orange(Clone)")
-                _orange = !_orange;
             if (spawned[i].name == "Character_Pentagon(Clone)")
                 _pentagon = !_pentagon;
+            if (spawned[i].name == "Character_Royal(Clone)")
+                _royal = !_royal;
             if (spawned[i].name == "Character_SassyPink(Clone)")
                 _sassypink = !_sassypink;
             if (spawned[i].name == "Character_Star(Clone)")
                 _star = !_star;
+            if (spawned[i].name == "Character(_TopHatClone)")
+                _tophat = !_tophat;
 
         }
-        if (_cold || _egg || _lightblue || _orange || _pentagon || _sassypink || _star)
+        _EndGameMenu.SetActive(false);
+        _ResultText.SetActive(true);
+        if ( _buckethat || _cold || _egg || _flower || _glasses || _jenny || _lightblue || _pentagon || _royal || _sassypink || _star || _tophat )
         {
-            Debug.Log("you suck");
+            _ResultText.GetComponent<Text>().text = "Try Again!";
+
         }
         else
-            Debug.Log("Yay");
+        _ResultText.GetComponent<Text>().text = "Try Again!";
     }
 
 
     #region ToggleFUNctions
+    public void buckethatpress()
+    {
+        _buckethat = !_buckethat;
+    }
     public void coldpress()
     {
         _cold = !_cold;
@@ -216,17 +242,29 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     {
         _egg = !_egg;
     }
+    public void flowerpress()
+    {
+        _flower = !_flower;
+    }
+    public void glassespress()
+    {
+        _glasses = !_glasses;
+    }
+    public void jennypress()
+    {
+        _jenny = !_jenny;
+    }
     public void lightbluepress()
     {
         _lightblue = !_lightblue;
     }
-    public void orangepress()
-    {
-        _orange = !_orange;
-    }
     public void pentagonpress()
     {
         _pentagon = !_pentagon;
+    }
+    public void royalpress()
+    {
+        _royal = !_royal;
     }
     public void sassypinkpress()
     {
@@ -236,7 +274,10 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     {
         _star = !_star;
     }
-
+    public void tophatpress()
+    {
+        _tophat = !_tophat;
+    }
     #endregion
 }
 

@@ -9,6 +9,9 @@ public class BusMovement : MonoBehaviour
 {
     public float speed = 5f;
     public int stops = 5;
+    public int trees = 5;
+    public int birds = 5;
+
     public bool go = true;
     private float x = -12.99f;
     public int currentstop = 0;
@@ -16,6 +19,10 @@ public class BusMovement : MonoBehaviour
     public GameObject SpawnBusManager;
     public GameObject BusStop;
     public List<GameObject> BusStops = new List<GameObject>();
+    public GameObject Tree;
+    public List<GameObject> Trees = new List<GameObject>();
+    public GameObject Bird;
+    public List<GameObject> Birds = new List<GameObject>();
 
 
 
@@ -28,10 +35,21 @@ public class BusMovement : MonoBehaviour
             BusStops.Add(Instantiate(BusStop, new Vector3(i * 200f / (stops) - 5, -0.64f, 0), Quaternion.identity));
 
         }
+        for (int i = 1; i <= trees; i++)
+        {
+            Trees.Add(Instantiate(Tree, new Vector3(i * 200f / (trees), -0.57f, 0), Quaternion.identity));
+
+        }
+        for (int i = 1; i <= birds; i++)
+        {
+            Birds.Add(Instantiate(Bird, new Vector3(i * 200f / (birds), 4.5f, 0), Quaternion.identity));
+
+        }
+
 
     }
 
-// Update is called once per frame
+    // Update is called once per frame
 
     void Update()
     {
