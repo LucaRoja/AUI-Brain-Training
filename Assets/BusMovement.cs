@@ -84,7 +84,11 @@ public class BusMovement : MonoBehaviour
         for (int i = 1; i <= stops; i++)
         {
             Destroy(BusStops[i-1]);
-
+           
+        }
+        for (int i = 1; i <= trees; i++)
+        {
+            Destroy(Trees[i - 1]);
 
         }
         SpawnBusManager.GetComponent<SpawnManagerBus>().endgame();
