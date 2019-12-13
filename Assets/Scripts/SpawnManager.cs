@@ -15,6 +15,7 @@ public class SpawnManager : MonoBehaviour
     public bool bounce = false;
     public float _lower_velocity = 3.0f;
     public float _upper_velocity = 6.0f;
+    public bool black_and_white = false;
 
     public Screen2 screen;
     // Start is called before the first frame update
@@ -27,9 +28,17 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        for(int i = 0; i < SpawnNumber; i++)
+        int j;
+        for (int i = 0; i < SpawnNumber; i++)
         {
-            int j = UnityEngine.Random.Range(0, sprites.Count);
+            if (!black_and_white)
+            {
+                j = UnityEngine.Random.Range(0, 12 - i);
+            }
+            else
+            {
+                j = UnityEngine.Random.Range(12, sprites.Count);
+            }
             go = Instantiate(Object, screen.Random(), Quaternion.identity);
             go.GetComponent<SpriteRenderer>().sprite = sprites[j];
             go.name = "Object" + i;

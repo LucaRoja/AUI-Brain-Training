@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Object: {fileID: 4554861733027606857, guid: eb74aaeda3901014ba24559eed29c47f, type: 3}
+  GameManager: {fileID: 0}
   sprites:
   - {fileID: -6588180987816631744, guid: 9720236450c964b00afc72841679ca87, type: 3}
   - {fileID: -8129042436780531635, guid: 9720236450c964b00afc72841679ca87, type: 3}
@@ -57,6 +58,18 @@ MonoBehaviour:
   - {fileID: 3345312156231229754, guid: 9720236450c964b00afc72841679ca87, type: 3}
   - {fileID: -5750398203756691148, guid: 9720236450c964b00afc72841679ca87, type: 3}
   - {fileID: -6486392967060590482, guid: 9720236450c964b00afc72841679ca87, type: 3}
+  - {fileID: -3475545510960775275, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: -7666412901302336926, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: 4371839903027428116, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: 558320514450689937, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: -5043973341896196451, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: -3309578491158231183, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: 8591215256252950853, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: -7035233731067712096, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: -865714603858612396, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: -300560353381473082, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: -2875934794657054222, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
+  - {fileID: -5609892931215572555, guid: eb1f8e517bffd49f3902302e305ff049, type: 3}
   SpawnNumber: 1
   bounce: 1
   _lower_velocity: 3
