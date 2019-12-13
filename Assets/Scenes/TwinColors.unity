@@ -209,21 +209,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
-        type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 2af35d21a2880514782bcf84077f4d3d, type: 3}
     - target: {fileID: 7028929092747169928, guid: 14f287941310d4f37a38d47844a3a020,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -302,6 +287,21 @@ PrefabInstance:
     - target: {fileID: 7028929092747169929, guid: 14f287941310d4f37a38d47844a3a020,
         type: 3}
       propertyPath: RegularExplosion
+      value: 
+      objectReference: {fileID: 8300000, guid: 2af35d21a2880514782bcf84077f4d3d, type: 3}
+    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
+        type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028929092747169926, guid: 14f287941310d4f37a38d47844a3a020,
+        type: 3}
+      propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 2af35d21a2880514782bcf84077f4d3d, type: 3}
     - target: {fileID: 7028929092747169931, guid: 14f287941310d4f37a38d47844a3a020,
@@ -694,7 +694,7 @@ PrefabInstance:
     - target: {fileID: 5755226774618099182, guid: 0401ddaec3809497fbb51415863ab19c,
         type: 3}
       propertyPath: SpawnNumber
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5755226774618099182, guid: 0401ddaec3809497fbb51415863ab19c,
         type: 3}
@@ -704,7 +704,7 @@ PrefabInstance:
     - target: {fileID: 5755226774618099182, guid: 0401ddaec3809497fbb51415863ab19c,
         type: 3}
       propertyPath: _upper_velocity
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5755226774618099182, guid: 0401ddaec3809497fbb51415863ab19c,
         type: 3}
@@ -717,6 +717,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8956331897593433516, guid: b2f2b27e86ebd9c4f960ad79cacedf42,
         type: 3}
+    - target: {fileID: 5755226774618099182, guid: 0401ddaec3809497fbb51415863ab19c,
+        type: 3}
+      propertyPath: bounce
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0401ddaec3809497fbb51415863ab19c, type: 3}
 --- !u!1 &2029218464

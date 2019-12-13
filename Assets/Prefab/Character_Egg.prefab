@@ -114,5 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d763522f0a570495d8241082d7f13e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnBusManager: {fileID: 6511488748953905527, guid: cea69848f004a4b3086db108ef49db14,
+    type: 3}
   bus: {fileID: 8007394269413540487, guid: 0c801476f03b146018d6b4505f731f45, type: 3}
   firstspawned: 0

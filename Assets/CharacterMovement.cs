@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private float speed = -2;
+    public GameObject SpawnBusManager;
     public GameObject bus;
     public bool firstspawned = false; // only destroy objects coming from right (spawn) 
 
@@ -18,11 +18,11 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
-        //Debug.Log(bus.GetComponent<Transform>().position.x);
+        transform.position = new Vector3(transform.position.x + SpawnBusManager.GetComponent<SpawnManagerBus>()._CharacterSpeed * Time.deltaTime, transform.position.y, transform.position.z);
+        Debug.Log(SpawnBusManager.GetComponent<SpawnManagerBus>()._CharacterSpeed);
         if (bus.GetComponent<Transform>().position.x + 1.5f  >= transform.position.x && firstspawned)
             gameObject.SetActive(false);
-        else if (transform.position.x < bus.GetComponent<Transform>().position.x - 10)
+        else if (transform.position.x < bus.GetComponent<Transform>().position.x - 15)
             {
             Destroy(gameObject);
         }

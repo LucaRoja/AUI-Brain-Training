@@ -43,5 +43,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399a6550d1e1645d6b67797005abc374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: []
+  TempGameObject: {fileID: 0}
+  bus: {fileID: 0}
+  scenery: {fileID: 0}
   spawnPrefabs: []
+  spawned: []
+  SpawnsPerStop: 4
+  UnspawnsPerStop: 2
+  _CharacterSpeed: -2
+  _buckethat: 0
+  _cold: 0
+  _egg: 0
+  _flower: 0
+  _glasses: 0
+  _jenny: 0
+  _lightblue: 0
+  _pentagon: 0
+  _royal: 0
+  _sassypink: 0
+  _star: 0
+  _tophat: 0
