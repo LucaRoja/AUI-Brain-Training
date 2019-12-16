@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //private GameObject clickedRight;
-    //private GameObject clickedLeft;
-    //private Color colorRight;
-    //private Color colorLeft;
+    private GameObject clickedRight;
+    private GameObject clickedLeft;
+    private Color colorRight;
+    private Color colorLeft;
     private GameObject clicked;
     private GameObject clicked2;
     private Color color1;
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        
         RaycastHit2D hitRight = Physics2D.Raycast(new Vector2(skeleton.HandRight.x, skeleton.HandRight.y), Vector2.zero);
         RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2(skeleton.HandLeft.x, skeleton.HandLeft.y), Vector2.zero);
         if(hitRight.collider != null && skeleton.isRightHandClosed(0.07f))
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
             clickedLeft.GetComponent<Movement>().first = false;
             clickedLeft.GetComponent<Rigidbody2D>().isKinematic = true;
         }
-        */
+        /*
          RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
          if (hit.collider != null && Input.GetMouseButtonDown(0))
          {
@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
              clicked2.GetComponent<Rigidbody2D>().isKinematic = true;
              second = false;
          }
-        
+        */
         if (destroyed == SpawnNumber)
         {
             destroyed = 0;
@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
     }
     public void weCollided(bool right)
     {
-        /*
+        
         if (once)
         {
             once = false;
@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
         }
         else
             once = true;
-            */
+            /*
             if (once)
             {
                 once = false;
@@ -165,6 +165,7 @@ public class GameManager : MonoBehaviour
             }
             else
                 once = true;
+                */
                 
         }
     public void ChangeBlackAndWhite()
