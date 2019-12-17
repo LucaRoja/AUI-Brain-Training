@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
 {
     public bool follow = false;
     public bool first = false;
+    public float follow_x;
+    public float follow_y;
 
     public float _lower_velocity = 3.0f;
     public float _upper_velocity = 6.0f;
@@ -55,8 +57,9 @@ public class Movement : MonoBehaviour
         } 
         else
         {
-            mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            _tr.position = new Vector3(mouseposition.x, mouseposition.y);
+            _tr.position = new Vector3(follow_x, follow_y);
+            //mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //_tr.position = new Vector3(mouseposition.x, mouseposition.y);
         }
     }
 

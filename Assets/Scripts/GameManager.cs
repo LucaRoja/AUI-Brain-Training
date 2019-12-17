@@ -64,33 +64,40 @@ public class GameManager : MonoBehaviour
     {
         if (MagicRoomKinectV2Manager.instance.MagicRoomKinectV2Manager_active)
         {
+            temporarySkeleton = null;
 
             foreach(KinectBodySkeleton c in MagicRoomKinectV2Manager.instance.skeletons) 
             {
-                if(temporarySkeleton == null)
+                //Debug.Log(c);
+                if(temporarySkeleton == null && c.SpineBase.z > 0)
                 {
                     temporarySkeleton = c;
                 }
-                else if(temporarySkeleton.SpineBase.z > c.SpineBase.z && c.SpineBase.z > 0)
+                else if(temporarySkeleton == null)
+                    continue;
+                else if(temporarySkeleton.SpineBase.z < c.SpineBase.z && c.SpineBase.z > 0)
                 {
                     temporarySkeleton = c;
                 }
             }
             skeleton = temporarySkeleton;
-            RaycastHit2D hitRight = Physics2D.Raycast(new Vector2(skeleton.HandRight.x, skeleton.HandRight.y), Vector2.zero);
-            RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2(skeleton.HandLeft.x, skeleton.HandLeft.y), Vector2.zero);
+            RaycastHit2D hitRight = Physics2D.Raycast(new Vector2((skeleton.HandRight.x* 9.33f - 4),( skeleton.HandRight.y* 10.78f)), Vector2.zero);
+            RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2((skeleton.HandLeft.x*9.33f - 4) ,( skeleton.HandLeft.y*10.78f)), Vector2.zero);
+            Debug.Log(skeleton.isRightHandClosed(0.07f));
             if (hitRight.collider != null && skeleton.isRightHandClosed(0.07f))
             {
                 clickedRight = hitRight.transform.gameObject;
                 clickedRight.GetComponent<Movement>().follow = true;
                 clickedRight.GetComponent<Rigidbody2D>().isKinematic = false;
+                clickedRight.GetComponent<Movement>().follow_x = skeleton.HandRight.x* 9.33f - 4;
+                clickedRight.GetComponent<Movement>().follow_y = skeleton.HandRight.y*10.78f;
                 colorRight = clickedRight.GetComponent<Renderer>().material.GetColor("_Color");
                 clickedRight.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
             }
-            else if (hitRight.collider != null)
+            else if (clickedRight != null)
             {
                 clickedRight.GetComponent<Movement>().follow = false;
-                clickedRight.GetComponent<Renderer>().material.SetColor("_Color", colorRight);
+                clickedRight.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
                 clickedRight.GetComponent<Rigidbody2D>().isKinematic = true;
             }
             if (hitLeft.collider != null && skeleton.isLeftHandClosed(0.07f))
@@ -98,13 +105,15 @@ public class GameManager : MonoBehaviour
                 clickedLeft = hitLeft.transform.gameObject;
                 clickedLeft.GetComponent<Movement>().follow = true;
                 clickedLeft.GetComponent<Rigidbody2D>().isKinematic = false;
+                clickedLeft.GetComponent<Movement>().follow_x = skeleton.HandLeft.x* 9.33f + 4;
+                clickedLeft.GetComponent<Movement>().follow_y = skeleton.HandLeft.y*10.78f;
                 colorLeft = clickedLeft.GetComponent<Renderer>().material.GetColor("_Color");
                 clickedLeft.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
             }
-            else if (hitLeft.collider != null)
+            else if (clickedLeft != null)
             {
                 clickedLeft.GetComponent<Movement>().follow = false;
-                clickedLeft.GetComponent<Renderer>().material.SetColor("_Color", colorLeft);
+                clickedLeft.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
                 clickedLeft.GetComponent<Movement>().first = false;
                 clickedLeft.GetComponent<Rigidbody2D>().isKinematic = true;
             }
