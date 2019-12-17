@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private Color color2;
     private bool once = true;
     public KinectBodySkeleton skeleton;
+    KinectBodySkeleton temporarySkeleton;
 
     public int SpawnNumber = 12;
     public GameObject SpawnManager;
@@ -33,6 +34,12 @@ public class GameManager : MonoBehaviour
     private bool second = false;
     public int destroyed = 0;
 
+    private void Start()
+    {
+        MagicRoomKinectV2Manager.instance.setUpKinect(5, 1);
+        MagicRoomKinectV2Manager.instance.startSamplingKinect(KinectSamplingMode.Streaming);
+
+    }
     private void Awake()
     {
         selectionMenu = GameObject.Find("SelectionMenu");  
@@ -55,37 +62,52 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        RaycastHit2D hitRight = Physics2D.Raycast(new Vector2(skeleton.HandRight.x, skeleton.HandRight.y), Vector2.zero);
-        RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2(skeleton.HandLeft.x, skeleton.HandLeft.y), Vector2.zero);
-        if(hitRight.collider != null && skeleton.isRightHandClosed(0.07f))
+        if (MagicRoomKinectV2Manager.instance.MagicRoomKinectV2Manager_active)
         {
-            clickedRight = hitRight.transform.gameObject;
-            clickedRight.GetComponent<Movement>().follow = true;
-            clickedRight.GetComponent<Rigidbody2D>().isKinematic = false;
-            colorRight = clickedRight.GetComponent<Renderer>().material.GetColor("_Color");
-            clickedRight.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
-        }
-        else if(hitRight.collider != null)
-        {
-            clickedRight.GetComponent<Movement>().follow = false;
-            clickedRight.GetComponent<Renderer>().material.SetColor("_Color", colorRight);
-            clickedRight.GetComponent<Rigidbody2D>().isKinematic = true;
-        }
-        if (hitLeft.collider != null && skeleton.isLeftHandClosed(0.07f))
-        {
-            clickedLeft = hitLeft.transform.gameObject;
-            clickedLeft.GetComponent<Movement>().follow = true;
-            clickedLeft.GetComponent<Rigidbody2D>().isKinematic = false;
-            colorLeft = clickedLeft.GetComponent<Renderer>().material.GetColor("_Color");
-            clickedLeft.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
-        }
-        else if (hitLeft.collider != null)
-        {
-            clickedLeft.GetComponent<Movement>().follow = false;
-            clickedLeft.GetComponent<Renderer>().material.SetColor("_Color", colorLeft);
-            clickedLeft.GetComponent<Movement>().first = false;
-            clickedLeft.GetComponent<Rigidbody2D>().isKinematic = true;
+
+            foreach(KinectBodySkeleton c in MagicRoomKinectV2Manager.instance.skeletons) 
+            {
+                if(temporarySkeleton == null)
+                {
+                    temporarySkeleton = c;
+                }
+                else if(temporarySkeleton.SpineBase.z > c.SpineBase.z && c.SpineBase.z > 0)
+                {
+                    temporarySkeleton = c;
+                }
+            }
+            skeleton = temporarySkeleton;
+            RaycastHit2D hitRight = Physics2D.Raycast(new Vector2(skeleton.HandRight.x, skeleton.HandRight.y), Vector2.zero);
+            RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2(skeleton.HandLeft.x, skeleton.HandLeft.y), Vector2.zero);
+            if (hitRight.collider != null && skeleton.isRightHandClosed(0.07f))
+            {
+                clickedRight = hitRight.transform.gameObject;
+                clickedRight.GetComponent<Movement>().follow = true;
+                clickedRight.GetComponent<Rigidbody2D>().isKinematic = false;
+                colorRight = clickedRight.GetComponent<Renderer>().material.GetColor("_Color");
+                clickedRight.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
+            }
+            else if (hitRight.collider != null)
+            {
+                clickedRight.GetComponent<Movement>().follow = false;
+                clickedRight.GetComponent<Renderer>().material.SetColor("_Color", colorRight);
+                clickedRight.GetComponent<Rigidbody2D>().isKinematic = true;
+            }
+            if (hitLeft.collider != null && skeleton.isLeftHandClosed(0.07f))
+            {
+                clickedLeft = hitLeft.transform.gameObject;
+                clickedLeft.GetComponent<Movement>().follow = true;
+                clickedLeft.GetComponent<Rigidbody2D>().isKinematic = false;
+                colorLeft = clickedLeft.GetComponent<Renderer>().material.GetColor("_Color");
+                clickedLeft.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
+            }
+            else if (hitLeft.collider != null)
+            {
+                clickedLeft.GetComponent<Movement>().follow = false;
+                clickedLeft.GetComponent<Renderer>().material.SetColor("_Color", colorLeft);
+                clickedLeft.GetComponent<Movement>().first = false;
+                clickedLeft.GetComponent<Rigidbody2D>().isKinematic = true;
+            }
         }
         /*
          RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
