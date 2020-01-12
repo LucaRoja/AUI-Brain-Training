@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // refrence to all spawn points in level and list of all object we can spawn 
 
@@ -35,7 +36,7 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     private GameObject _ResultText;
     private GameObject _EndGameMenu;
 
-    void Start()
+    void Awake()
     {
         _EndGameMenu = GameObject.Find("EndGameMenu");
         _ResultText = GameObject.Find("ResultText");
@@ -224,10 +225,20 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 
         }
         else
-        _ResultText.GetComponent<Text>().text = "You did it!";
+            _ResultText.GetComponent<Text>().text = "You did it!";
         _ResultText.SetActive(true);
     }
 
+    public void backToTheMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        GameObject.Find("MenuManager").GetComponent<MainMenuManager>().backToMenu();
+    }
+
+    public void restart()
+    {
+        SceneManager.LoadScene("BusBackground");
+    }
 
     #region ToggleFUNctions
     public void buckethatpress()

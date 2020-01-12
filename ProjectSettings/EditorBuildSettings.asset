@@ -5,7 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TwinColors.unity
+    guid: ebb7b8ad52835534cb57d545c1ca45d8
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8b5232777ee02f44db89b0a2f0449ccf
+  - enabled: 1
+    path: Assets/Scenes/BusGame.unity
+    guid: 7aa928ac62d16fc438cbb0af349dd770
+  - enabled: 1
+    path: Assets/Scenes/BusBackground.unity
+    guid: f423dd4f6fae547ceb5c17b54d395386
   m_configObjects: {}

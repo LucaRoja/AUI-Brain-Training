@@ -19,7 +19,6 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(transform.position.x + SpawnBusManager.GetComponent<SpawnManagerBus>()._CharacterSpeed * Time.deltaTime, transform.position.y, transform.position.z);
-        Debug.Log(SpawnBusManager.GetComponent<SpawnManagerBus>()._CharacterSpeed);
         if (bus.GetComponent<Transform>().position.x + 1.5f  >= transform.position.x && firstspawned)
             gameObject.SetActive(false);
         else if (transform.position.x < bus.GetComponent<Transform>().position.x - 15)

@@ -68,7 +68,7 @@ public class EventFromKinectServer
     }
     public bool isRightHandClosed(float threshold)
     {
-        //Debug.Log(Vector3.Distance(HandRight, HandTipRight));
+        Debug.Log(Vector3.Distance(HandRight, HandTipRight));
         return Vector3.Distance(HandRight, HandTipRight) <= threshold;
     }
     public bool isLeftHandClosed(float threshold)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,13 +22,18 @@ public class GameManager : MonoBehaviour
     public GameObject SpawnManager;
     public GameObject AudioManager;
     public bool bounce = false;
-    public bool black_and_white = false;
+    public Toggle black_and_white;
+    public Toggle colorOutline;
+    public Toggle patternBW;
+    public Toggle patternColor;
     public float _lower_velocity = 3.0f;
     public float _upper_velocity = 6.0f;
     public InputField SpawnInput;
     public InputField MinimumInput;
     public InputField MaximumInput;
     private GameObject selectionMenu;
+    private GameObject rightHand;
+    private GameObject leftHand;
     int integer_Value_we_Want;
 
     private bool first = true;
@@ -42,8 +48,12 @@ public class GameManager : MonoBehaviour
     }
     private void Awake()
     {
-        selectionMenu = GameObject.Find("SelectionMenu");  
-    }
+        selectionMenu = GameObject.Find("SelectionMenu");
+        rightHand = GameObject.Find("RightHand");
+        leftHand = GameObject.Find("LeftHand");
+        rightHand.transform.GetChild(1).gameObject.SetActive(false);
+        leftHand.transform.GetChild(1).gameObject.SetActive(false);
+}
     public void startGame()
     {
         SpawnNumber = int.Parse(SpawnInput.text); //for integer 
@@ -56,7 +66,10 @@ public class GameManager : MonoBehaviour
         SpawnManager.GetComponent<SpawnManager>().bounce = bounce;
         SpawnManager.GetComponent<SpawnManager>()._lower_velocity = _lower_velocity;
         SpawnManager.GetComponent<SpawnManager>()._upper_velocity = _upper_velocity;
-        SpawnManager.GetComponent<SpawnManager>().black_and_white = black_and_white;
+        SpawnManager.GetComponent<SpawnManager>().black_and_white = black_and_white.isOn;
+        SpawnManager.GetComponent<SpawnManager>().colorOutline = colorOutline.isOn;
+        SpawnManager.GetComponent<SpawnManager>().patternBW = patternBW.isOn;
+        SpawnManager.GetComponent<SpawnManager>().patternColor = patternColor;
     }
 
     // Update is called once per frame
@@ -157,6 +170,26 @@ public class GameManager : MonoBehaviour
             RestartManager.gameOver();
             AudioManager.GetComponent<AudioManager>().gameWon();
         }
+        if (skeleton.isRightHandClosed(0.07f))
+        {
+            rightHand.transform.GetChild(1).gameObject.SetActive(true);
+            rightHand.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else
+        {
+            rightHand.transform.GetChild(1).gameObject.SetActive(false);
+            rightHand.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        if (skeleton.isLeftHandClosed(0.07f))
+        {
+            leftHand.transform.GetChild(1).gameObject.SetActive(true);
+            leftHand.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else
+        {
+            leftHand.transform.GetChild(1).gameObject.SetActive(false);
+            leftHand.transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
     public void weCollided(bool right)
     {
@@ -167,6 +200,7 @@ public class GameManager : MonoBehaviour
             if (right)
             {
                 destroyed++;
+                StartCoroutine(changeColor(Color.green));
             }
         }
         else
@@ -199,9 +233,65 @@ public class GameManager : MonoBehaviour
                 */
                 
         }
+
+    IEnumerator changeColor(Color c)
+    {
+        float timePassed = 0f;
+        MagicRoomLightManager.instance.sendColour(c);
+        while(timePassed < 1)
+        {
+            timePassed += Time.deltaTime;
+        }
+        MagicRoomLightManager.instance.sendColour(Color.white);
+        yield return null;
+    }
+    
     public void ChangeBlackAndWhite()
     {
-        black_and_white = !black_and_white;
-    }
+        if (black_and_white.isOn)
+        {
+            colorOutline.isOn = false;
+            patternBW.isOn = false;
+            patternColor.isOn = false;
 
+        }
+
+    }
+    public void ChangeColorOutline()
+    {
+        if (colorOutline.isOn)
+        {
+            black_and_white.isOn = false;
+            patternBW.isOn = false;
+            patternColor.isOn = false;
+
+        }
+    }
+    public void ChangePatternBW()
+    {
+        if (patternBW.isOn)
+        {
+            black_and_white.isOn = false;
+            colorOutline.isOn = false;
+            patternColor.isOn = false;
+
+        }
+    }
+    public void ChangePatternColor()
+    {
+        if (patternColor.isOn)
+        {
+            black_and_white.isOn = false;
+            colorOutline.isOn = false;
+            patternBW.isOn = false;
+
+        }
+    }
+    
+
+    public void backToTheMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        GameObject.Find("MenuManager").GetComponent<MainMenuManager>().backToMenu();
+    }
 }

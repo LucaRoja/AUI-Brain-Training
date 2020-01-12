@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2911083fb2b347688f1cb80bf8157e6, type: 3}
   m_Name: Screen4x3
   m_EditorClassIdentifier: 
-  Width: 15
-  Height: 12
+  Width: 5
+  Height: 5

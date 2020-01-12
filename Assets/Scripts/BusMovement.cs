@@ -27,8 +27,12 @@ public class BusMovement : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
+        stops = GameObject.Find("MenuManager").GetComponent<MainMenuManager>()._numberOfStops;
+        birds = GameObject.Find("MenuManager").GetComponent<MainMenuManager>()._birds;
+        trees = GameObject.Find("MenuManager").GetComponent<MainMenuManager>()._trees;
+        speed = GameObject.Find("MenuManager").GetComponent<MainMenuManager>()._busVelocity;
         x = transform.position.x + 200f / (stops);
         for (int i = 1; i <= stops; i++)
         {
