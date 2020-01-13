@@ -33,6 +33,8 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     public bool _star = false;
     public bool _tophat = false;
 
+    public SmartToy passaPorta;
+
     private GameObject _ResultText;
     private GameObject _EndGameMenu;
 
@@ -46,9 +48,30 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 
         _ResultText.SetActive(false);
 
+
     }
 
+    private void Start()
+    {
+        passaPorta = GameObject.Find("Passaporta").GetComponent<SmartToy>();
+        MagicRoomSmartToyManager.instance.openEventChannelSmartToy("Passaporta");
+    }
 
+    private void Update()
+    {
+        //In the update of "Controller"
+        if (!string.IsNullOrEmpty(passaPorta.GetComponent<RFIDReader>().lastread))
+        {
+            string cardRead = this.passaPorta.GetComponent<RFIDReader>().lastread;
+            Debug.Log(cardRead);
+            if(cardRead == "3")
+            {
+                Debug.Log("read card 3");
+            }
+            //Do Stuff
+            this.passaPorta.GetComponent<RFIDReader>().lastread = null;
+        }
+    }
 
     public void Spawn(int spawnPrefabIndex, int spawnPointIndex)
     {
@@ -168,10 +191,6 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
             //yield return new WaitForSeconds(1f);
         }
         */
-
-
-
-
     }
 
 
@@ -183,6 +202,12 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 
     public void endgame()
     {
+        //Once in your game
+        if (this.passaPorta == null)
+        {
+            Debug.Log("Some problem with \"Passaporta\"");
+            return;
+        }
         _EndGameMenu.SetActive(true);
         scenery.SetActive(false);
         bus.SetActive(false);
