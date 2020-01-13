@@ -35,7 +35,7 @@ public class feetFollow : MonoBehaviour
             }
             skeleton = temporarySkeleton;
             if (skeleton != null)
-                _tr.position = new Vector2((skeleton.HandRight.x * 9.33f - 4),( skeleton.HandRight.y*10.78f));
+                _tr.position = new Vector2((skeleton.HandRight.x * 9f),( skeleton.HandRight.y*5f));
         }
     }
 }

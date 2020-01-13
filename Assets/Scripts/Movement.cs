@@ -44,6 +44,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("position of object" +_tr.position);
         // used for debugging and testing purposes
         if (!follow)
         {
@@ -51,10 +52,11 @@ public class Movement : MonoBehaviour
                 _tr.position + _direction * velocity * Time.deltaTime;
                 
         }
-        else if (first)
+       /* else if (first)
         {
             return;
         } 
+        */
         else
         {
             _tr.position = new Vector3(follow_x, follow_y);

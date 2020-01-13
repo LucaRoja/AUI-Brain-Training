@@ -35,10 +35,17 @@ public class MainMenuManager : Singleton<MainMenuManager>
         if(SceneManager.GetActiveScene().name == "MainMenu" && justLoaded)
         {
             _busSelection = GameObject.Find("BusGameSelection");
+            GameObject.Find("Confirm").GetComponent<Button>().onClick.AddListener(clickConfirm);
+            NumberOfStops = GameObject.Find("NumberOfStops").GetComponent<InputField>();
+            busVelocity = GameObject.Find("BusVelocity").GetComponent<InputField>();
+            NumberOfSpawns = GameObject.Find("MaximumSpawns").GetComponent<InputField>();
+            NumberOfDespawns = GameObject.Find("MaximumDespawns").GetComponent<InputField>();
+            NumberOfTrees = GameObject.Find("NumberOfTrees").GetComponent<InputField>();
+            NumberOfBirds = GameObject.Find("Birds").GetComponent<InputField>();
             _busSelection.SetActive(false);
             justLoaded = false;
             GameObject.Find("TwinButton").GetComponent<Button>().onClick.AddListener(clickButton1);
-            GameObject.Find("BusButton").GetComponent<Button>().onClick.AddListener(clickButton2);
+            GameObject.Find("BusButton").GetComponent<Button>().onClick.AddListener(clickButton2);          
         }
     }
 

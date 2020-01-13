@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     private GameObject clicked2;
     private Color color1;
     private Color color2;
+    private bool onlyOneRight = true;
+    private bool onlyOneLeft = true;
     private bool once = true;
     public KinectBodySkeleton skeleton;
     KinectBodySkeleton temporarySkeleton;
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour
         leftHand = GameObject.Find("LeftHand");
         rightHand.transform.GetChild(1).gameObject.SetActive(false);
         leftHand.transform.GetChild(1).gameObject.SetActive(false);
+       // MagicRoomLightManager.instance.sendColour(color.white, 0);
 }
     public void startGame()
     {
@@ -69,7 +72,7 @@ public class GameManager : MonoBehaviour
         SpawnManager.GetComponent<SpawnManager>().black_and_white = black_and_white.isOn;
         SpawnManager.GetComponent<SpawnManager>().colorOutline = colorOutline.isOn;
         SpawnManager.GetComponent<SpawnManager>().patternBW = patternBW.isOn;
-        SpawnManager.GetComponent<SpawnManager>().patternColor = patternColor;
+        SpawnManager.GetComponent<SpawnManager>().patternColor = patternColor.isOn;
     }
 
     // Update is called once per frame
@@ -94,34 +97,38 @@ public class GameManager : MonoBehaviour
                 }
             }
             skeleton = temporarySkeleton;
-            RaycastHit2D hitRight = Physics2D.Raycast(new Vector2((skeleton.HandRight.x* 9.33f - 4),( skeleton.HandRight.y* 10.78f)), Vector2.zero);
-            RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2((skeleton.HandLeft.x*9.33f - 4) ,( skeleton.HandLeft.y*10.78f)), Vector2.zero);
-            Debug.Log(skeleton.isRightHandClosed(0.07f));
-            if (hitRight.collider != null && skeleton.isRightHandClosed(0.07f))
+            RaycastHit2D hitRight = Physics2D.Raycast(new Vector2((skeleton.HandRight.x* 9f),( skeleton.HandRight.y* 5f)), Vector2.zero);
+            RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2((skeleton.HandLeft.x*9f) ,( skeleton.HandLeft.y*5f)), Vector2.zero);
+            if (hitRight.collider != null && skeleton.isRightHandClosed(0.07f) && onlyOneRight)
             {
                 clickedRight = hitRight.transform.gameObject;
                 clickedRight.GetComponent<Movement>().follow = true;
                 clickedRight.GetComponent<Rigidbody2D>().isKinematic = false;
-                clickedRight.GetComponent<Movement>().follow_x = skeleton.HandRight.x* 9.33f - 4;
-                clickedRight.GetComponent<Movement>().follow_y = skeleton.HandRight.y*10.78f;
+                clickedRight.GetComponent<Movement>().follow_x = skeleton.HandRight.x* 9f;
+                clickedRight.GetComponent<Movement>().follow_y = skeleton.HandRight.y*5f;
                 colorRight = clickedRight.GetComponent<Renderer>().material.GetColor("_Color");
                 clickedRight.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
+                onlyOneRight = false;
             }
             else if (clickedRight != null)
             {
                 clickedRight.GetComponent<Movement>().follow = false;
                 clickedRight.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
                 clickedRight.GetComponent<Rigidbody2D>().isKinematic = true;
+                onlyOneRight = true;
             }
-            if (hitLeft.collider != null && skeleton.isLeftHandClosed(0.07f))
+            else 
+                 onlyOneRight = true;
+            if (hitLeft.collider != null && skeleton.isLeftHandClosed(0.07f) && onlyOneLeft)
             {
                 clickedLeft = hitLeft.transform.gameObject;
                 clickedLeft.GetComponent<Movement>().follow = true;
                 clickedLeft.GetComponent<Rigidbody2D>().isKinematic = false;
-                clickedLeft.GetComponent<Movement>().follow_x = skeleton.HandLeft.x* 9.33f + 4;
-                clickedLeft.GetComponent<Movement>().follow_y = skeleton.HandLeft.y*10.78f;
+                clickedLeft.GetComponent<Movement>().follow_x = skeleton.HandLeft.x* 9f;
+                clickedLeft.GetComponent<Movement>().follow_y = skeleton.HandLeft.y*5f;
                 colorLeft = clickedLeft.GetComponent<Renderer>().material.GetColor("_Color");
                 clickedLeft.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
+                onlyOneLeft = false;
             }
             else if (clickedLeft != null)
             {
@@ -129,7 +136,10 @@ public class GameManager : MonoBehaviour
                 clickedLeft.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
                 clickedLeft.GetComponent<Movement>().first = false;
                 clickedLeft.GetComponent<Rigidbody2D>().isKinematic = true;
+                onlyOneLeft = true;
             }
+            else 
+                onlyOneLeft = true;
         }
         /*
          RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -238,11 +248,11 @@ public class GameManager : MonoBehaviour
     {
         float timePassed = 0f;
         MagicRoomLightManager.instance.sendColour(c);
-        while(timePassed < 1)
+        /*while(timePassed < 3)
         {
             timePassed += Time.deltaTime;
-        }
-        MagicRoomLightManager.instance.sendColour(Color.white);
+        }*/
+        MagicRoomLightManager.instance.sendColour(Color.green, 0);
         yield return null;
     }
     
