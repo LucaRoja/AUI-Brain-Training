@@ -42,6 +42,8 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
     {
         _EndGameMenu = GameObject.Find("EndGameMenu");
         _ResultText = GameObject.Find("ResultText");
+        SpawnsPerStop = GameObject.Find("MenuManager").GetComponent<MainMenuManager>()._numberOfSpawns;
+        UnspawnsPerStop = GameObject.Find("MenuManager").GetComponent<MainMenuManager>()._numberOfDespawns;
 
         _EndGameMenu.SetActive(false);
         bus.GetComponent<BusMovement>().manager = this;
@@ -68,7 +70,7 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
             {
                 buckethatpress();
             }
-            if (cardRead == "c")
+            if (cardRead == "C")
             {
                coldpress();
             }
@@ -88,28 +90,28 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
             {
                 jennypress();
             }
-            if (cardRead == "a")
+            if (cardRead == "A")
             {
                 Debug.Log("A funcionou");
                lightbluepress();
             }
-            if (cardRead == "b")
+            if (cardRead == "B")
             {
                 pentagonpress();
             }
-            if (cardRead == "e")
+            if (cardRead == "E")
             {
                 royalpress();
             }
-            if (cardRead == "d")
+            if (cardRead == "D")
             {
                 sassypinkpress();
             }
-            if (cardRead == "j")
+            if (cardRead == "J")
             {
                 starpress();
             }
-            if (cardRead == "f")
+            if (cardRead == "F")
             {
                 tophatpress();
             }
