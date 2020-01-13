@@ -66,7 +66,52 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
             Debug.Log(cardRead);
             if(cardRead == "3")
             {
-                Debug.Log("read card 3");
+                buckethatpress();
+            }
+            if (cardRead == "c")
+            {
+               coldpress();
+            }
+            if (cardRead == "5")
+            {
+                eggpress();
+            }
+            if (cardRead == "2")
+            {
+                flowerpress();
+            }
+            if (cardRead == "1")
+            {
+                glassespress();
+            }
+            if (cardRead == "4")
+            {
+                jennypress();
+            }
+            if (cardRead == "a")
+            {
+                Debug.Log("A funcionou");
+               lightbluepress();
+            }
+            if (cardRead == "b")
+            {
+                pentagonpress();
+            }
+            if (cardRead == "e")
+            {
+                royalpress();
+            }
+            if (cardRead == "d")
+            {
+                sassypinkpress();
+            }
+            if (cardRead == "j")
+            {
+                starpress();
+            }
+            if (cardRead == "f")
+            {
+                tophatpress();
             }
             //Do Stuff
             this.passaPorta.GetComponent<RFIDReader>().lastread = null;
