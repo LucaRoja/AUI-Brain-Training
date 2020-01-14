@@ -106,9 +106,18 @@ MonoBehaviour:
   - {fileID: 21300018, guid: 44347fe9f061947e0a8931cdddbd15fa, type: 3}
   - {fileID: 21300020, guid: 44347fe9f061947e0a8931cdddbd15fa, type: 3}
   - {fileID: 21300022, guid: 44347fe9f061947e0a8931cdddbd15fa, type: 3}
+  backgrounds:
+  - {fileID: 21300000, guid: 40ebe1416c5664161a10a6932c40b6e4, type: 3}
+  - {fileID: 21300000, guid: 7699a902678c541f3ba224a8701562d0, type: 3}
+  - {fileID: 21300000, guid: 937c6b9183c9d47aba32eac5f5a1f2c9, type: 3}
+  - {fileID: 21300000, guid: cd9dd89e82beb44b5bfe7e24abb7e7b5, type: 3}
+  - {fileID: 21300000, guid: 3ef9cfba9d8f44a6087aa203e60b2e9a, type: 3}
   SpawnNumber: 1
   bounce: 1
   _lower_velocity: 3
   _upper_velocity: 6
   black_and_white: 0
+  colorOutline: 0
+  patternBW: 0
+  patternColor: 0
   screen: {fileID: 11400000, guid: 6fb2baa632dde419e9cf6a4896b367ee, type: 2}

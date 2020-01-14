@@ -37,11 +37,13 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 
     private GameObject _ResultText;
     private GameObject _EndGameMenu;
+    private GameObject _SubmitAgain;
 
     void Awake()
     {
         _EndGameMenu = GameObject.Find("EndGameMenu");
         _ResultText = GameObject.Find("ResultText");
+        _SubmitAgain = GameObject.Find("SubmitAgain");
         SpawnsPerStop = GameObject.Find("MenuManager").GetComponent<MainMenuManager>()._numberOfSpawns;
         UnspawnsPerStop = GameObject.Find("MenuManager").GetComponent<MainMenuManager>()._numberOfDespawns;
 
@@ -49,6 +51,7 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
         bus.GetComponent<BusMovement>().manager = this;
 
         _ResultText.SetActive(false);
+        _SubmitAgain.SetActive(false);
 
 
     }
@@ -92,7 +95,6 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
             }
             if (cardRead == "A")
             {
-                Debug.Log("A funcionou");
                lightbluepress();
             }
             if (cardRead == "B")
@@ -297,7 +299,7 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
         if ( _buckethat || _cold || _egg || _flower || _glasses || _jenny || _lightblue || _pentagon || _royal || _sassypink || _star || _tophat )
         {
             _ResultText.GetComponent<Text>().text = "Try Again!";
-
+            _SubmitAgain.SetActive(true);
         }
         else
             _ResultText.GetComponent<Text>().text = "You did it!";
@@ -365,6 +367,25 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
         _tophat = !_tophat;
     }
     #endregion
+
+    public void SubmitAgain()
+    {
+        _buckethat = false;
+        _cold = false;
+        _egg = false;
+        _flower = false;
+        _glasses = false;
+        _jenny = false;
+        _lightblue = false;
+        _pentagon = false;
+        _royal = false;
+        _sassypink = false;
+        _star = false;
+        _tophat = false;
+        _ResultText.SetActive(false);
+        _SubmitAgain.SetActive(false);
+        endgame();
+    }
 }
 
 

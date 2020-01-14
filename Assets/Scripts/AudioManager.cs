@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource SoundEffect;
 
     public AudioClip CheerSound;
+    public AudioClip OneShape;
     /*public AudioClip LaserClip;
     public AudioClip RegularExplosion;
     public AudioClip SimpleExplosion;
@@ -18,6 +19,11 @@ public class AudioManager : MonoBehaviour
     public void gameWon()
     {
             SoundEffect.PlayOneShot(CheerSound);
+    }
+
+    public void ShapeMatch()
+    {
+            SoundEffect.PlayOneShot(OneShape);
     }
     
     /*public void LaserSound()
