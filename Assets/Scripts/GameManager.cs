@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
                 }
                 else if(temporarySkeleton == null)
                     continue;
-                else if(temporarySkeleton.SpineBase.z < c.SpineBase.z && c.SpineBase.z > 0)
+                else if(temporarySkeleton.SpineBase.z > c.SpineBase.z && c.SpineBase.z > 0)
                 {
                     temporarySkeleton = c;
                 }
