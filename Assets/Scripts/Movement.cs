@@ -44,7 +44,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("position of object" +_tr.position);
         // used for debugging and testing purposes
         if (!follow)
         {

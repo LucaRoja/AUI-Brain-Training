@@ -117,7 +117,9 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
             }
             //Do Stuff
             this.passaPorta.GetComponent<RFIDReader>().lastread = null;
+           
         }
+         
     }
 
     public void Spawn(int spawnPrefabIndex, int spawnPointIndex)
@@ -249,15 +251,16 @@ public class SpawnManagerBus : MonoSingleton<SpawnManagerBus>
 
     public void endgame()
     {
+        
+        _EndGameMenu.SetActive(true);
+        scenery.SetActive(false);
+        bus.SetActive(false);
         //Once in your game
         if (this.passaPorta == null)
         {
             Debug.Log("Some problem with \"Passaporta\"");
             return;
         }
-        _EndGameMenu.SetActive(true);
-        scenery.SetActive(false);
-        bus.SetActive(false);
     }
 
     public void checkResults()
